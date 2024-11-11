@@ -1,0 +1,500 @@
+Marca,Nombre,Modelo_carro,Año_carro,Precio,Existencias
+Cadillac,filtro de aceite,Escalade,2009,23,0
+Ford,pastillas de freno,Taurus,2009,234,23
+Mazda,correa de distribución,626,1996,193,93
+Chrysler,amortiguadores,Crossfire,2004,790,48
+Isuzu,correa de distribución,i-Series,2006,205,43
+Ford,pastillas de freno,Courier,1989,520,42
+Honda,bujías,Civic,2008,77,85
+Dodge,correa de distribución,Ram 1500,2008,249,93
+Audi,bujías,Allroad,2004,527,26
+GMC,pastillas de freno,2500 Club Coupe,1998,185,23
+Pontiac,amortiguadores,Firebird,1968,591,57
+Ford,pastillas de freno,Expedition,2003,340,0
+Mercedes-Benz,correa de distribución,SL-Class,2000,118,97
+Rolls-Royce,bujías,Phantom,2010,574,71
+Chevrolet,pastillas de freno,Avalanche 2500,2004,59,66
+Chevrolet,amortiguadores,Beretta,1994,576,78
+Porsche,amortiguadores,911,2000,418,29
+Ford,correa de distribución,F-Series,2008,131,44
+Chevrolet,pastillas de freno,Corvette,1978,144,52
+Buick,bujías,Regal,2001,436,79
+Volkswagen,filtro de aceite,GTI,1998,195,3
+Honda,bujías,CR-V,1998,503,96
+Toyota,bujías,Solara,2006,481,85
+Pontiac,amortiguadores,Bonneville,1984,20,35
+Chevrolet,amortiguadores,Venture,2003,676,26
+Toyota,amortiguadores,Echo,2003,750,24
+Chevrolet,amortiguadores,Cruze,2012,544,30
+Buick,bujías,Terraza,2005,429,87
+Chevrolet,pastillas de freno,Tahoe,2005,651,37
+Mitsubishi,amortiguadores,Lancer Evolution,2006,745,36
+Mercedes-Benz,bujías,300E,1992,540,73
+Dodge,correa de distribución,Spirit,1994,218,0
+Ford,pastillas de freno,Aerostar,1986,213,13
+Lexus,correa de distribución,ES,1998,666,12
+Ford,bujías,F150,1996,262,35
+Chevrolet,correa de distribución,Express 2500,2012,672,89
+Maybach,amortiguadores,Landaulet,2012,80,76
+Suzuki,filtro de aceite,Reno,2005,483,2
+Audi,filtro de aceite,A8,1999,84,12
+Saab,amortiguadores,9-2X,2005,85,7
+Lexus,amortiguadores,GS,2003,152,16
+BMW,bujías,X3,2005,470,33
+Oldsmobile,filtro de aceite,Silhouette,1997,112,93
+Volkswagen,amortiguadores,GTI,1992,314,29
+Hyundai,filtro de aceite,Veracruz,2008,8,3
+Dodge,pastillas de freno,Ram 1500,2008,383,22
+Lamborghini,correa de distribución,Diablo,1999,402,16
+Lexus,filtro de aceite,ES,1992,353,88
+Land Rover,amortiguadores,Freelander,2008,321,21
+Toyota,bujías,Camry,2009,621,72
+Aston Martin,bujías,Vantage,2009,75,52
+Dodge,bujías,Neon,2003,671,94
+BMW,filtro de aceite,X3,2007,121,27
+Pontiac,amortiguadores,GTO,1966,318,21
+Nissan,bujías,Frontier,2002,460,4
+GMC,filtro de aceite,Sierra 1500,2013,176,20
+Acura,pastillas de freno,CL,1998,83,10
+Chevrolet,amortiguadores,Classic,2005,286,3
+Volkswagen,filtro de aceite,riolet,1992,339,22
+Mercedes-Benz,filtro de aceite,E-Class,1986,679,2
+Kia,amortiguadores,Spectra,2009,332,95
+Mercedes-Benz,filtro de aceite,GL-Class,2009,566,65
+Oldsmobile,correa de distribución,LSS,1999,166,34
+Isuzu,amortiguadores,Hombre Space,1999,469,2
+Lexus,filtro de aceite,ES,1998,356,21
+Subaru,amortiguadores,XT,1988,119,49
+BMW,amortiguadores,525,2006,59,35
+GMC,pastillas de freno,1500,1994,406,33
+Nissan,correa de distribución,Frontier,2010,620,58
+Mercury,amortiguadores,Capri,1986,165,22
+Fiat,filtro de aceite,500,2012,608,93
+Subaru,amortiguadores,Legacy,2004,752,29
+Ford,bujías,E150,2005,647,13
+Cadillac,pastillas de freno,DeVille,1994,58,28
+Buick,correa de distribución,Enclave,2010,718,76
+Dodge,pastillas de freno,Grand Caravan,1997,511,84
+Cadillac,filtro de aceite,DeVille,1992,271,79
+Pontiac,correa de distribución,Bonneville,1985,3,19
+Chrysler,amortiguadores,Town & Country,2005,580,50
+BMW,correa de distribución,X5,2010,363,73
+Cadillac,pastillas de freno,SRX,2012,545,29
+BMW,filtro de aceite,X6,2011,463,89
+Kia,filtro de aceite,Soul,2011,188,53
+Nissan,bujías,Cube,2009,105,36
+Mercury,filtro de aceite,Tracer,1997,527,22
+Kia,amortiguadores,Spectra,2005,252,69
+Mazda,filtro de aceite,MX-5,1999,415,87
+BMW,bujías,X5,2012,42,49
+Subaru,pastillas de freno,Legacy,1998,310,90
+Mercury,pastillas de freno,Topaz,1993,153,24
+Audi,pastillas de freno,100,1994,252,69
+Toyota,pastillas de freno,MR2,2004,280,13
+Ford,pastillas de freno,F150,2004,209,83
+Land Rover,bujías,LR3,2008,446,51
+Mazda,pastillas de freno,B-Series,1987,214,86
+Chrysler,amortiguadores,Sebring,2001,194,51
+BMW,bujías,550,2006,337,41
+Ford,pastillas de freno,F250,1998,22,65
+Ford,pastillas de freno,Econoline E250,1997,29,67
+Bentley,amortiguadores,Continental GT,2006,615,30
+Audi,bujías,A6,1997,397,21
+Dodge,filtro de aceite,Ram 3500,2003,31,95
+Ford,correa de distribución,Crown Victoria,2010,21,96
+Maybach,bujías,62,2008,277,42
+Ford,pastillas de freno,F-Series,1987,100,60
+Ford,correa de distribución,Five Hundred,2006,624,43
+Hyundai,filtro de aceite,Tiburon,2005,510,72
+Honda,filtro de aceite,Accord,2000,512,20
+Chevrolet,pastillas de freno,Silverado 3500,2012,36,9
+Mercedes-Benz,amortiguadores,R-Class,2009,407,59
+Honda,amortiguadores,CR-V,2003,338,22
+GMC,correa de distribución,Envoy,2008,301,33
+Dodge,correa de distribución,Avenger,2000,405,37
+Subaru,pastillas de freno,Impreza,2011,657,0
+Dodge,correa de distribución,Caravan,2005,649,36
+GMC,pastillas de freno,Yukon,2005,368,24
+Nissan,pastillas de freno,Maxima,2010,528,89
+Chevrolet,correa de distribución,Tahoe,2005,490,16
+Mazda,correa de distribución,B-Series,1999,288,32
+Ford,amortiguadores,Fiesta,2001,456,12
+BMW,bujías,745,2004,271,26
+Chrysler,pastillas de freno,LHS,1995,383,59
+Pontiac,amortiguadores,Aztek,2002,548,16
+Nissan,amortiguadores,240SX,1993,219,27
+Buick,correa de distribución,Enclave,2012,182,64
+Lincoln,bujías,Town Car,1991,375,68
+Ford,pastillas de freno,F350,2012,758,81
+Infiniti,amortiguadores,Q,2006,344,84
+Infiniti,correa de distribución,G,1994,467,67
+Mercedes-Benz,correa de distribución,SL-Class,2005,640,59
+Pontiac,filtro de aceite,Grand Prix,1991,415,48
+Toyota,correa de distribución,Celica,1995,555,31
+Toyota,correa de distribución,4Runner,2003,332,29
+BMW,correa de distribución,5 Series,1997,563,83
+Hyundai,amortiguadores,Sonata,1995,697,11
+BMW,pastillas de freno,7 Series,1994,134,23
+GMC,correa de distribución,Yukon,1995,539,13
+Volkswagen,amortiguadores,rio,1995,129,97
+Dodge,correa de distribución,Neon,2003,416,34
+Chrysler,pastillas de freno,PT Cruiser,2006,112,56
+Chevrolet,pastillas de freno,Impala,2003,277,96
+Mercedes-Benz,filtro de aceite,SL-Class,2009,592,52
+Mercedes-Benz,amortiguadores,SLR McLaren,2009,786,68
+Chevrolet,bujías,Suburban 2500,1994,172,52
+Porsche,correa de distribución,924 S,1987,53,24
+Nissan,amortiguadores,Sentra,1992,582,34
+Dodge,correa de distribución,Ram 1500,2003,574,46
+Dodge,correa de distribución,Nitro,2007,188,46
+Jaguar,filtro de aceite,X-Type,2004,115,10
+Mercedes-Benz,filtro de aceite,CLK-Class,2003,334,77
+Mercedes-Benz,bujías,SL-Class,1995,522,8
+Nissan,pastillas de freno,Altima,2003,550,41
+Mercedes-Benz,correa de distribución,SLK-Class,2008,125,25
+Oldsmobile,amortiguadores,Ciera,1996,676,1
+Pontiac,correa de distribución,Sunbird,1988,162,42
+Mazda,correa de distribución,CX-7,2008,5,2
+Volkswagen,filtro de aceite,GTI,2012,399,5
+Ford,filtro de aceite,E-Series,1994,622,9
+Mazda,filtro de aceite,RX-7,1986,489,92
+Mercury,filtro de aceite,Villager,1995,697,44
+Ford,filtro de aceite,Fairlane,1966,350,4
+Porsche,pastillas de freno,Boxster,2012,351,78
+Volvo,pastillas de freno,S40,2002,481,55
+Mitsubishi,correa de distribución,Chariot,1991,497,10
+Ford,amortiguadores,E-Series,1985,274,82
+Chrysler,correa de distribución,300M,2003,310,33
+Dodge,correa de distribución,Ram Van 2500,2002,299,98
+Cadillac,pastillas de freno,Seville,2000,395,80
+Volkswagen,pastillas de freno,Golf,2010,80,89
+GMC,filtro de aceite,2500,1997,647,45
+MINI,pastillas de freno,Cooper,2007,767,53
+Ford,bujías,F250,2010,780,14
+Ford,bujías,Explorer,2000,617,93
+GMC,amortiguadores,Sierra 2500,2004,143,63
+Nissan,pastillas de freno,Sentra,1996,476,61
+Subaru,bujías,Forester,2003,711,68
+Subaru,correa de distribución,Outback Sport,2002,329,49
+GMC,pastillas de freno,Savana 2500,1997,38,10
+Chevrolet,correa de distribución,Volt,2012,465,57
+Honda,bujías,Passport,1995,409,2
+Nissan,amortiguadores,Murano,2010,111,57
+Toyota,bujías,Echo,2004,232,51
+Mercedes-Benz,amortiguadores,GLK-Class,2010,557,35
+Jaguar,amortiguadores,XJ Series,1992,183,93
+Aston Martin,amortiguadores,Rapide,2012,62,34
+Pontiac,correa de distribución,Grand Prix,2003,746,54
+Lexus,correa de distribución,LX,1998,310,14
+Acura,bujías,SLX,1997,395,34
+Pontiac,filtro de aceite,Grand Am,2004,116,68
+Volkswagen,filtro de aceite,CC,2009,56,76
+Subaru,amortiguadores,Outback,2000,269,42
+Mercedes-Benz,correa de distribución,M-Class,2006,491,5
+GMC,correa de distribución,Sierra,2011,106,62
+Lincoln,amortiguadores,MKS,2013,408,4
+Mitsubishi,pastillas de freno,Montero Sport,2003,302,75
+Volvo,bujías,V70,2003,653,9
+Geo,filtro de aceite,Storm,1993,301,100
+Maserati,filtro de aceite,228,1990,388,14
+Mercedes-Benz,correa de distribución,S-Class,1995,337,80
+Toyota,correa de distribución,Sequoia,2007,756,17
+Ford,filtro de aceite,Expedition,1999,156,65
+Dodge,amortiguadores,Journey,2011,235,98
+Mazda,correa de distribución,B2600,1987,559,37
+Lincoln,filtro de aceite,Aviator,2003,74,98
+Toyota,filtro de aceite,Sienna,2006,567,44
+Toyota,bujías,T100 Xtra,1996,239,21
+BMW,bujías,6 Series,2010,71,2
+Hyundai,amortiguadores,Elantra,2005,764,28
+Land Rover,correa de distribución,Defender Ice Edition,2010,87,13
+BMW,pastillas de freno,Z4 M,2006,490,16
+Pontiac,correa de distribución,Safari,1986,628,45
+Mercedes-Benz,amortiguadores,C-Class,1997,198,47
+Toyota,amortiguadores,Sienna,2012,456,12
+Dodge,amortiguadores,Durango,2012,82,28
+GMC,amortiguadores,3500 Club Coupe,1996,421,63
+Mazda,filtro de aceite,626,1986,239,68
+Volvo,pastillas de freno,S70,1998,199,84
+Suzuki,amortiguadores,XL-7,2003,211,15
+Toyota,amortiguadores,Camry,1996,790,88
+Mercury,amortiguadores,Mountaineer,2006,692,49
+Buick,correa de distribución,LeSabre,2005,471,39
+BMW,bujías,Alpina B7,2007,56,36
+Mercedes-Benz,correa de distribución,GL-Class,2011,189,47
+Mercury,amortiguadores,Tracer,1995,74,89
+Chrysler,pastillas de freno,300,2012,391,23
+Chrysler,correa de distribución,Concorde,1997,620,31
+Lexus,pastillas de freno,SC,2003,84,9
+Suzuki,bujías,Esteem,1999,170,15
+Chevrolet,filtro de aceite,Camaro,1996,159,66
+Honda,filtro de aceite,Accord,1986,373,71
+Kia,correa de distribución,Sedona,2003,589,81
+Acura,filtro de aceite,SLX,1998,161,76
+Ford,correa de distribución,Explorer Sport,2002,561,83
+Ford,pastillas de freno,Focus,2010,135,28
+GMC,filtro de aceite,Suburban 2500,1993,720,93
+Mercedes-Benz,correa de distribución,SL-Class,1999,453,56
+Chevrolet,filtro de aceite,Avalanche,2007,132,13
+Maybach,pastillas de freno,62,2008,277,2
+Nissan,correa de distribución,Altima,2006,683,88
+Pontiac,amortiguadores,Gemini,1989,631,15
+Mercedes-Benz,filtro de aceite,W201,1991,285,29
+Toyota,amortiguadores,Camry,2011,155,79
+Pontiac,correa de distribución,Grand Am,2000,763,7
+GMC,pastillas de freno,Yukon,2003,426,43
+Lotus,amortiguadores,Esprit,1993,448,88
+Suzuki,amortiguadores,Vitara,1999,93,59
+Hyundai,filtro de aceite,Elantra,2000,647,46
+Mazda,correa de distribución,B-Series,1994,740,12
+Porsche,bujías,Boxster,1998,525,16
+Pontiac,correa de distribución,G6,2005,376,57
+Mazda,pastillas de freno,Familia,1990,73,60
+Pontiac,bujías,Gemini,1986,302,16
+Subaru,filtro de aceite,Impreza,1996,501,67
+Pontiac,amortiguadores,Montana,2006,126,13
+BMW,pastillas de freno,330,2005,416,52
+Mitsubishi,amortiguadores,Mirage,2000,304,97
+Buick,amortiguadores,LaCrosse,2005,344,32
+Chevrolet,bujías,Malibu,2000,641,77
+Dodge,filtro de aceite,Neon,1996,329,57
+Volkswagen,correa de distribución,Cabriolet,1991,603,39
+Lincoln,correa de distribución,Blackwood,2003,610,100
+Ford,filtro de aceite,Econoline E350,1993,593,54
+Nissan,bujías,Maxima,2004,412,58
+GMC,filtro de aceite,Yukon XL,2006,782,56
+Lotus,pastillas de freno,Elise,2006,775,95
+Acura,correa de distribución,SLX,1997,306,75
+Toyota,bujías,TundraMax,2012,279,25
+Mercedes-Benz,filtro de aceite,R-Class,2010,151,14
+Isuzu,amortiguadores,i-290,2007,796,11
+BMW,bujías,Z4,2006,624,31
+Nissan,bujías,JUKE,2012,692,0
+Mitsubishi,amortiguadores,Eclipse,1999,384,0
+Land Rover,filtro de aceite,LR2,2012,672,62
+Mercedes-Benz,bujías,SLR McLaren,2006,352,85
+Chevrolet,pastillas de freno,Suburban 2500,2006,629,39
+Cadillac,pastillas de freno,XLR-V,2009,382,3
+Suzuki,filtro de aceite,Swift,1998,623,97
+Subaru,correa de distribución,Legacy,1998,275,62
+Land Rover,correa de distribución,Range Rover,1995,481,63
+GMC,amortiguadores,Savana 3500,2003,429,88
+Jeep,pastillas de freno,Commander,2010,82,92
+GMC,filtro de aceite,Yukon,2008,222,4
+Lexus,filtro de aceite,RX,2009,235,20
+Audi,correa de distribución,A6,2011,154,53
+Volkswagen,correa de distribución,Phaeton,2005,94,67
+Ford,bujías,Aspire,1995,601,68
+Lotus,correa de distribución,Elan,1990,331,44
+BMW,correa de distribución,3 Series,2004,263,13
+Lincoln,filtro de aceite,Town Car,1992,12,32
+Chevrolet,bujías,Lumina,1995,1,86
+Lexus,filtro de aceite,LS,2007,157,74
+GMC,pastillas de freno,Yukon,2004,76,27
+Dodge,bujías,Dakota Club,1996,202,72
+Audi,pastillas de freno,V8,1992,149,35
+Mazda,filtro de aceite,626,1987,570,16
+Spyker,filtro de aceite,C8,2006,579,72
+Mazda,filtro de aceite,B-Series Plus,1992,515,90
+Chevrolet,bujías,Avalanche,2012,20,90
+Audi,amortiguadores,5000CS Quattro,1986,599,86
+BMW,filtro de aceite,3 Series,1997,558,94
+Mercury,pastillas de freno,Milan,2011,71,64
+Acura,amortiguadores,NSX,1998,45,31
+Jaguar,pastillas de freno,X-Type,2004,41,4
+Lincoln,pastillas de freno,Continental Mark VII,1987,232,19
+Chevrolet,bujías,Colorado,2009,722,58
+Ford,filtro de aceite,Taurus,2005,55,24
+Chevrolet,correa de distribución,S10 Blazer,1994,636,72
+Audi,amortiguadores,S4,2005,334,69
+Suzuki,pastillas de freno,XL7,2008,238,6
+Dodge,bujías,Stratus,2003,584,57
+Buick,correa de distribución,Electra,1984,199,28
+Chevrolet,pastillas de freno,Express 3500,1997,406,92
+Ford,pastillas de freno,Escort,1993,622,43
+GMC,bujías,Sonoma Club Coupe,1998,37,48
+GMC,pastillas de freno,Savana 3500,1997,112,26
+Pontiac,bujías,Daewoo Kalos,2005,705,2
+Volkswagen,correa de distribución,Rabbit,2010,18,94
+GMC,pastillas de freno,Savana,2010,164,29
+Infiniti,amortiguadores,G37,2008,69,52
+Mercedes-Benz,filtro de aceite,CLS-Class,2006,670,86
+Plymouth,pastillas de freno,Grand Voyager,1992,571,79
+BMW,correa de distribución,3 Series,2008,390,2
+Chevrolet,bujías,Avalanche,2007,224,28
+Cadillac,filtro de aceite,Brougham,1992,529,62
+Mercury,bujías,Villager,1993,361,86
+Mitsubishi,filtro de aceite,Pajero,1987,79,100
+Volkswagen,correa de distribución,Passat,2005,469,42
+Chevrolet,amortiguadores,Express 2500,2003,525,94
+Isuzu,correa de distribución,Ascender,2003,692,86
+Maserati,correa de distribución,Spyder,2002,88,97
+Ford,correa de distribución,Bronco,1995,131,62
+Toyota,bujías,Paseo,1992,794,77
+Chevrolet,bujías,Suburban 1500,2005,689,39
+Chevrolet,correa de distribución,Corvette,1965,5,94
+Chevrolet,amortiguadores,Cavalier,1993,564,63
+Audi,filtro de aceite,5000S,1988,45,87
+Saab,correa de distribución,9-3,2009,519,99
+Cadillac,bujías,Escalade EXT,2004,110,71
+Mazda,bujías,626,2000,612,71
+Honda,pastillas de freno,Civic,2012,110,62
+Ford,bujías,F350,2006,257,2
+Maserati,filtro de aceite,GranTurismo,2008,533,43
+Isuzu,pastillas de freno,Rodeo,2000,596,60
+Jeep,correa de distribución,Patriot,2009,446,57
+Ford,filtro de aceite,Tempo,1987,571,3
+Lexus,correa de distribución,GX,2008,440,18
+Volkswagen,bujías,riolet,1992,752,1
+Mitsubishi,bujías,Pajero,1993,796,54
+Acura,correa de distribución,RL,2001,79,90
+GMC,amortiguadores,Sierra 2500,2000,147,36
+Chevrolet,correa de distribución,Suburban 1500,2003,390,70
+Buick,correa de distribución,Regal,2002,106,67
+Lexus,amortiguadores,HS,2010,339,49
+GMC,correa de distribución,Yukon XL 2500,2012,133,39
+Infiniti,bujías,QX,2007,51,56
+Volkswagen,correa de distribución,Eos,2007,142,46
+GMC,filtro de aceite,2500 Club Coupe,1994,599,32
+Chevrolet,bujías,Silverado 3500,2006,81,91
+Lexus,correa de distribución,LS,2008,683,50
+Mercury,filtro de aceite,Mariner,2010,135,14
+Subaru,amortiguadores,Outback,2004,6,9
+Kia,bujías,Sorento,2003,100,37
+Saab,amortiguadores,900,1988,572,21
+Mercury,amortiguadores,Mystique,1997,313,65
+Chevrolet,filtro de aceite,Monte Carlo,1997,783,57
+Ford,pastillas de freno,Taurus,1997,466,91
+GMC,bujías,Savana,2010,345,22
+Mitsubishi,filtro de aceite,Mirage,1985,13,30
+Mitsubishi,filtro de aceite,Montero,1996,158,13
+Chevrolet,amortiguadores,HHR,2011,128,63
+Mercedes-Benz,correa de distribución,M-Class,2005,138,15
+Hyundai,bujías,Scoupe,1994,483,86
+Jeep,pastillas de freno,Grand Cherokee,1993,474,58
+Isuzu,pastillas de freno,Hombre,1996,396,93
+Buick,filtro de aceite,Skylark,1986,368,72
+Jaguar,correa de distribución,XK Series,2000,19,14
+Acura,correa de distribución,CL,2002,559,50
+Mitsubishi,filtro de aceite,RVR,1994,145,17
+Lincoln,pastillas de freno,Town Car,1991,82,2
+Dodge,correa de distribución,Ram 3500,2000,693,33
+Chevrolet,bujías,Equinox,2007,365,53
+Subaru,filtro de aceite,Impreza,2011,749,27
+Lexus,amortiguadores,LX,2007,176,88
+GMC,pastillas de freno,2500,1996,363,76
+Acura,correa de distribución,NSX,2001,640,22
+Suzuki,amortiguadores,Grand Vitara,2005,514,46
+Oldsmobile,filtro de aceite,Ciera,1994,469,3
+Mitsubishi,amortiguadores,Outlander Sport,2012,423,67
+Pontiac,amortiguadores,Aztek,2002,529,49
+Plymouth,pastillas de freno,Voyager,1998,258,60
+Mercedes-Benz,correa de distribución,GL-Class,2007,110,44
+Mazda,amortiguadores,Mazda6,2007,179,40
+Volkswagen,bujías,Rabbit,2010,313,31
+Maserati,filtro de aceite,Quattroporte,2005,403,36
+Dodge,filtro de aceite,Monaco,1992,668,91
+Buick,correa de distribución,Century,2001,619,80
+Toyota,amortiguadores,Previa,1993,686,8
+Volkswagen,pastillas de freno,Scirocco,1986,683,70
+Volkswagen,amortiguadores,Passat,1997,234,22
+Ford,bujías,F150,2011,262,15
+GMC,bujías,Savana 3500,1999,289,83
+Chevrolet,bujías,Cavalier,2001,264,22
+Ford,bujías,Contour,2000,658,12
+Chevrolet,bujías,Malibu,2006,581,51
+Aston Martin,amortiguadores,V8 Vantage,2010,69,15
+Volkswagen,correa de distribución,Type 2,1989,582,63
+Ford,amortiguadores,Focus,2002,184,31
+Ford,filtro de aceite,Econoline E150,1992,760,92
+Suzuki,bujías,Grand Vitara,2002,150,53
+Cadillac,correa de distribución,Eldorado,1993,782,36
+Ferrari,pastillas de freno,599 GTB Fiorano,2010,188,29
+Chrysler,filtro de aceite,PT Cruiser,2003,402,63
+Cadillac,amortiguadores,CTS-V,2010,708,5
+Land Rover,filtro de aceite,Defender 90,1994,100,50
+Lamborghini,amortiguadores,Murciélago,2007,226,45
+Mitsubishi,bujías,Galant,2000,499,31
+Mitsubishi,pastillas de freno,Montero,2000,447,3
+Dodge,correa de distribución,Magnum,2005,638,98
+Chevrolet,correa de distribución,Colorado,2008,540,22
+Volkswagen,filtro de aceite,Cabriolet,1986,170,42
+Lincoln,filtro de aceite,Town Car,1993,452,65
+Mazda,filtro de aceite,MX-5,1997,600,78
+Dodge,bujías,Grand Caravan,1996,16,36
+Volvo,bujías,740,1992,123,70
+Isuzu,bujías,Axiom,2004,416,37
+Honda,bujías,Fit,2012,357,58
+Chevrolet,amortiguadores,Lumina,1998,564,5
+Geo,pastillas de freno,Metro,1993,173,91
+Buick,correa de distribución,LeSabre,2001,800,8
+Kia,correa de distribución,Spectra,2003,335,70
+Buick,pastillas de freno,Park Avenue,1998,217,100
+MINI,bujías,Cooper Clubman,2009,448,8
+Ford,bujías,Mustang,1996,364,88
+Volvo,correa de distribución,C70,2002,54,25
+Ford,pastillas de freno,F250,2004,119,99
+Buick,correa de distribución,Century,1995,2,56
+Buick,correa de distribución,Special,1962,374,25
+Volkswagen,bujías,Jetta,1984,185,69
+Chevrolet,filtro de aceite,Tahoe,1997,502,24
+Volvo,amortiguadores,S60,2013,172,28
+Mercedes-Benz,amortiguadores,C-Class,2009,331,45
+Chrysler,bujías,PT Cruiser,2007,257,5
+Dodge,correa de distribución,Ram Van 2500,2001,241,55
+Bentley,amortiguadores,Arnage,2005,485,22
+Ferrari,filtro de aceite,599 GTB Fiorano,2008,547,26
+Kia,bujías,Rio,2012,624,32
+Lincoln,bujías,Continental,1986,298,86
+Chevrolet,filtro de aceite,G-Series 1500,1997,446,35
+Toyota,amortiguadores,Land Cruiser,2007,773,66
+Mercedes-Benz,filtro de aceite,W201,1988,260,57
+Chevrolet,pastillas de freno,Traverse,2010,160,97
+Ford,bujías,F-Series,2004,467,84
+Ford,bujías,F-Series,1995,62,60
+Chrysler,amortiguadores,Sebring,2006,666,38
+Mazda,filtro de aceite,929,1987,709,60
+Nissan,filtro de aceite,Frontier,2000,145,4
+Lotus,amortiguadores,Elan,1990,776,25
+Volkswagen,bujías,Golf,2012,191,70
+Lotus,amortiguadores,Exige,2011,609,86
+Dodge,bujías,Ram 2500,1998,85,2
+Hyundai,bujías,Genesis Coupe,2013,317,4
+Chevrolet,pastillas de freno,Camaro,1994,470,93
+Aston Martin,correa de distribución,DB9,2011,51,6
+Audi,amortiguadores,S4,2004,91,47
+Ford,filtro de aceite,Mustang,1968,349,43
+Volkswagen,filtro de aceite,Rabbit,2007,347,23
+Holden,bujías,VS Commodore,1996,19,69
+Saturn,correa de distribución,Relay,2007,335,79
+Volkswagen,amortiguadores,Fox,1993,436,88
+Volvo,amortiguadores,S40,2001,25,71
+Audi,bujías,S4,1992,365,12
+Subaru,bujías,Outback,2005,585,59
+Mitsubishi,bujías,Eclipse,2011,70,98
+Nissan,correa de distribución,Sentra,2001,34,38
+Hyundai,pastillas de freno,Tiburon,1998,374,96
+Hyundai,filtro de aceite,Tucson,2012,614,6
+Volvo,filtro de aceite,960,1993,248,49
+Toyota,correa de distribución,Solara,2008,125,69
+Pontiac,amortiguadores,Grand Prix,1974,270,75
+Daewoo,bujías,Lanos,2000,611,45
+Pontiac,correa de distribución,Firefly,1986,131,28
+Ford,amortiguadores,Galaxie,1966,6,58
+Scion,filtro de aceite,xD,2010,366,28
+Mercury,filtro de aceite,Sable,1995,50,20
+Dodge,bujías,Dynasty,1992,171,39
+Buick,correa de distribución,Riviera,1992,449,11
+Audi,filtro de aceite,Q5,2012,353,82
+Infiniti,filtro de aceite,QX56,2009,189,41
+BMW,pastillas de freno,M3,2005,759,65
+Mitsubishi,amortiguadores,Pajero,1997,24,42
+Subaru,amortiguadores,XT,1987,119,61
+Mitsubishi,correa de distribución,Galant,1986,643,11
+Mazda,pastillas de freno,MPV,1991,353,4
+GMC,bujías,Sierra 1500,2008,775,97
+Toyota,filtro de aceite,Sienna,2003,66,39
+Toyota,correa de distribución,Prius Plug-in,2012,128,51
+Mazda,pastillas de freno,MPV,2000,65,10
+Honda,amortiguadores,S2000,2001,265,42
+Dodge,correa de distribución,Ram 1500 Club,1995,574,18
