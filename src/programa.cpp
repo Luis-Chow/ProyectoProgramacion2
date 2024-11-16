@@ -38,6 +38,7 @@ struct respuestos{
 }R;
 
 void borrarFilaCSV(const string& archivo, int filaABorrar) {
+    int confirmar;
     ifstream input(archivo);
     ofstream temp("temp.csv");
     string linea;
@@ -51,9 +52,16 @@ void borrarFilaCSV(const string& archivo, int filaABorrar) {
 
     input.close();
     temp.close();
-
-    remove(archivo.c_str());
-    rename("temp.csv", archivo.c_str());
+    cout<<"Desea confirmar el cambio?  1. Si |  2. No"<<endl; cin>>confirmar;
+    if (confirmar==1){
+       remove(archivo.c_str());
+       rename("temp.csv", archivo.c_str());
+    } else if (confirmar==2){
+        remove("temp.csv");
+    } else{
+        cout<<"Opcion no valida, cancelando cambios...";
+        remove("temp.csv");
+    }
 }
 void actualizarCSV(const string& archivo){
     ifstream input(archivo);
@@ -105,8 +113,7 @@ void actualizarCSV(const string& archivo){
         cout<<"Error en la confirmacion, cancelando cambios...";
         input.close();
         temp.close();
-        remove(archivo.c_str());
-        rename("temp.csv", archivo.c_str());
+        remove("temp.csv");
     }
 }
 int main(){
@@ -142,14 +149,14 @@ int main(){
                     cout<<"Modelo: "; getline(cin,V.modelo);
                     cout<<"Marca: "; cin>>V.marca;
                     cout<<"Placa: "; cin>>V.placa;
-                    cout<<"Color:"; cin>>V.color;
+                    cout<<"Color: "; cin>>V.color;
                     cout<<"Fecha de lanzamiento: "; cin>> V.anio;
                     cout<<"Kilometraje:"; cin>>V.kilometraje; cin.ignore(100,'\n');
-                    cout<<"Estado de renta (yes/no/pending) "; getline(cin,V.rentado);
+                    cout<<"Estado de renta (yes/no/pending):  "; getline(cin,V.rentado);
                     cout<<"Motor: "; cin>>V.motor;
                     cout<<"Precio de renta: "; cin>>V.precio_renta; 
                     cout<<"Cedula del cliente: "; cin>>V.ced_cliente;
-                    cout<<"Fecha de entrega (dd/mm/yyyy)"; cin>>V.fecha_de_entrega;
+                    cout<<"Fecha de entrega (dd/mm/yyyy):  "; cin>>V.fecha_de_entrega;
                     string linea;
                     ofstream Vout("./bin/temp.csv");
                     while(getline(input, linea)){
@@ -192,14 +199,15 @@ int main(){
                             cout<<"Fecha de entrega: "<<fecha_de_entrega<<endl;
                         }
                     }
+                    input.close();
                     break;
                 }
                 default: {
                     cout<<"Opcion no valida"<<endl;
                     break;
                 }
-            break;
-           }
+                
+            }
            break;
         }
         case 2: { // Clientes
@@ -268,6 +276,7 @@ int main(){
                             cout<<"Activo: "<<activo<<endl;
                         }
                     }
+                    input.close();
                     break;
                 }
                 default:
@@ -336,6 +345,7 @@ int main(){
                             cout<<marca<<","<<nombre<<","<<modelo_carro<<","<<anio_carro<<","<<precio<<","<<existencias<<endl;
                         }
                     }
+                    input.close();
                     break;
                 }
                 default:
@@ -350,4 +360,3 @@ int main(){
     }
     return 0;
 }
-    
