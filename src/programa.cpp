@@ -12,11 +12,11 @@ struct vehiculo{
     string color;
     float precio_renta;
     float kilometraje;
-    char rentado[3];
+    string rentado;
     string motor;
     int ced_cliente;
     string fecha_de_entrega;
-};
+}V;
 
 struct cliente{
     int cedula;
@@ -25,26 +25,23 @@ struct cliente{
     string direccion;
     int cantidad_vehiculos_rentados;
     string email;
-    char activo[3];
-};
+    string activo;
+}C;
 
 struct respuestos{
-    string modelo;
     string marca;
     string nombre;
     string modelo_carro;
     int anio_carro;
     int precio;
     int existencias;
-};
+}R;
 
 void borrarFilaCSV(const string& archivo, int filaABorrar) {
     ifstream input(archivo);
-
     ofstream temp("temp.csv");
-    
     string linea;
-    int numeroFila = 0;
+    int numeroFila = 1;
     while (getline(input, linea)) {
         if (numeroFila != filaABorrar) {
             temp << linea << endl;
@@ -104,31 +101,35 @@ void actualizarCSV(const string& archivo){
         input.close();
         temp.close();
         remove("temp.csv");
-     }
+    }else {
+        cout<<"Error en la confirmacion, cancelando cambios...";
+        input.close();
+        temp.close();
+        remove(archivo.c_str());
+        rename("temp.csv", archivo.c_str());
+    }
 }
 int main(){
     int opcion1 = 0;
-    cout << "Que archivo desea leer? \n 1 = vehiculos | 2 = clientes | 3 = repuestos\n";
-    cin >> opcion1;
+    int opcion2 = 0;
+    int opciong = 0;
+    cout<<"Que archivo desea leer? \n1 = vehiculos | 2 = clientes | 3 = repuestos\n"; cin>>opcion1;
     ifstream input;
 
     switch (opcion1){
-        case 1: { // Vehiculos
-            int opcionx = 0;
-            cout << "Que accion desea realizar? \n 1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Lectura \n";
-            cin >> opcionx;
+        case 1: {  // Vehiculos
+            cout<<"VEHICULOS"<<endl;
+            cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion\n"; cin>>opcion2;
             input.open("./bin/Vehiculos.csv");
             if (!input.is_open()) {
-                cout << "Error al abrir el archivo Vehiculos.csv" << endl;
+                cout<<"Error al abrir el archivo Vehiculos.csv"<<endl;
                 return 1;
             }
-            switch (opcionx) {
+            switch (opcion2) {
                 case 1: { // Vehiculos > Borrar
-                    int fila;
-                    cout << "Que fila desea borrar? ";
-                    cin >> fila;
+                    cout<<"Que fila desea borrar? "; cin>>opciong;
                     input.close();
-                    borrarFilaCSV("./bin/Vehiculos.csv", fila);
+                    borrarFilaCSV("./bin/Vehiculos.csv", opciong);
                     break;
                 }
                 case 2: {  //Vehiculos Actualizar
@@ -136,90 +137,154 @@ int main(){
                     actualizarCSV("./bin/Vehiculos.csv");
                     break;
                 } 
-                case 3: // Vehiculos > Insercion
-                    // falta codigo
+                case 3: {   //Vehiculos Insercion
+                    cout<<"Ingrese los nuevos datos: \n" ; cin.ignore(100,'\n');
+                    cout<<"Modelo: "; getline(cin,V.modelo);
+                    cout<<"Marca: "; cin>>V.marca;
+                    cout<<"Placa: "; cin>>V.placa;
+                    cout<<"Color:"; cin>>V.color;
+                    cout<<"Fecha de lanzamiento: "; cin>> V.anio;
+                    cout<<"Kilometraje:"; cin>>V.kilometraje; cin.ignore(100,'\n');
+                    cout<<"Estado de renta (yes/no/pending) "; getline(cin,V.rentado);
+                    cout<<"Motor: "; cin>>V.motor;
+                    cout<<"Precio de renta: "; cin>>V.precio_renta; 
+                    cout<<"Cedula del cliente: "; cin>>V.ced_cliente;
+                    cout<<"Fecha de entrega (dd/mm/yyyy)"; cin>>V.fecha_de_entrega;
+                    string linea;
+                    ofstream Vout("./bin/temp.csv");
+                    while(getline(input, linea)){
+                        Vout<<linea<<endl;
+                    };
+                    Vout<<V.modelo<<","<<V.marca<<","<<V.placa<<","<<V.color<<","<<V.anio<<","<<V.kilometraje<<","<<V.rentado<<","<<V.motor<<","<<V.precio_renta<<","<<V.ced_cliente<<","<<V.fecha_de_entrega;
+                    cout<<"Desea confirmar los cambios? 1. Si | 2. No"<<endl; cin>>opciong;
+                    if(opciong == 1){
+                        input.close();
+                        Vout.close();
+                        remove("./bin/Vehiculos.csv");
+                        rename("./bin/temp.csv","./bin/Vehiculos.csv");
+                    } else if (opciong == 2){
+                        input.close();
+                        Vout.close();
+                        remove("./bin/temp.csv");
+                    }
                     break;
-                case 4: // Vehiculos > Lectura
-                    // falta codigo
+                }
+                default: {
+                    cout<<"Opcion no valida"<<endl;
                     break;
-                default:
-                    cout << "Opcion no valida" << endl;
-                    break;
+                }
             }
             break;
         }
         case 2: { // Clientes
-            int opcionx = 0;
-            cout << "Que accion desea realizar? \n 1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Lectura\n";
-            cin >> opcionx;
+            cout<<"CLIENTES"<<endl;
+            cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Lectura\n"; cin>>opcion2;
             input.open("./bin/Clientes.csv");
             if (!input.is_open()) {
-                cout << "Error al abrir el archivo Clientes.csv" << endl;
+                cout<<"Error al abrir el archivo Clientes.csv"<<endl;
                 return 1;
             }
-            switch (opcionx) {
+            switch (opcion2) {
                 case 1: { // Clientes > Borrar
-                    int fila;
-                    cout << "Que fila desea borrar? ";
-                    cin >> fila;
+                    cout<<"Que fila desea borrar? "; cin>>opciong;
                     input.close();
-                    borrarFilaCSV("./bin/Clientes.csv", fila);
+                    borrarFilaCSV("./bin/Clientes.csv", opciong);
                     break;
                 }
-                case 2 : {  //Clientes > Actualizar
+                case 2: {  //Clientes > Actualizar
                     input.close();
                     actualizarCSV("./bin/Clientes.csv");
                     break;
+                } 
+                case 3: {   // Clientes > Insercion
+                    cout<<"Ingrese los nuevos datos: \n" ; cin.ignore(100,'\n');
+                    cout<<"Cedula: "; cin>>C.cedula;
+                    cout<<"Nombre: "; cin>>C.nombre;
+                    cout<<"Apellido: "; cin>>C.apellido;
+                    cout<<"Correo electronico: "; cin>>C.email;
+                    cout<<"Cantidad de Vehiculos rentados: "; cin>> C.cantidad_vehiculos_rentados; cin.ignore(100,'\n');
+                    cout<<"Direccion "; getline(cin, C.direccion);
+                    cout<<"El cliente se encuentra activo? (yes/no/pending) "; getline(cin,C.activo);
+                    string linea;
+                    ofstream Vout("./bin/temp.csv");
+                    while(getline(input, linea)){
+                        Vout<<linea<<endl;
+                    };
+                    Vout<<C.cedula<<","<<C.nombre<<","<<C.apellido<<","<<C.email<<","<<C.cantidad_vehiculos_rentados<<","<<C.direccion<<","<<C.activo;
+                    cout<<"Desea confirmar los cambios? 1. Si | 2. No"<<endl; cin>>opciong;
+                    if(opciong == 1){
+                        input.close();
+                        Vout.close();
+                        remove("./bin/Clientes.csv");
+                        rename("./bin/temp.csv","./bin/Clientes.csv");
+                    } else if (opciong == 2){
+                        input.close();
+                        Vout.close();
+                        remove("./bin/temp.csv");
+                    }
+                    break;
                 }
-                case 3: // Clientes > Insercion
-                    // falta codigo
-                    break;
-                case 4: // Clientes > Lectura
-                    // falta codigo
-                    break;
                 default:
-                    cout << "Opcion no valida" << endl;
+                    cout<<"Opcion no valida" << endl;
                     break;
             }
             break;
         }
         case 3: { // Repuestos
-            int opcionx = 0;
-            cout << "Que accion desea realizar? \n 1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Lectura\n";
-            cin >> opcionx;
+            cout<<"REPUESTOS"<<endl;
+            cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Lectura\n"; cin>>opcion2;
             input.open("./bin/Repuestos.csv");
             if (!input.is_open()) {
-                cout << "Error al abrir el archivo repuestos.csv" << endl;
+                cout<<"Error al abrir el archivo repuestos.csv"<<endl;
                 return 1;
             }
-            switch (opcionx) {
+            switch (opcion2) {
                 case 1: { // Repuestos > Borrar
-                    int fila;
-                    cout << "Que fila desea borrar? ";
-                    cin >> fila;
+                    cout<<"Que fila desea borrar? "; cin>>opciong;
                     input.close();
-                    borrarFilaCSV("./bin/repuestos.csv", fila);
+                    borrarFilaCSV("./bin/Repuestos.csv", opciong);
                     break;
                 }
-                case 2 : { //Repuestos > Actualizar
+                case 2: { //Repuestos > Actualizar
                     input.close();
-                    actualizarCSV("./bin/repuestos.csv");
+                    actualizarCSV("./bin/Repuestos.csv");
                     break;
                 }
-                case 3: // Repuestos > Insercion
-                    // falta codigo
+                case 3: {        // Repuestos > Insercion
+                    cout<<"Ingrese los nuevos datos: \n" ; cin.ignore(100,'\n');
+                    cout<<"Marca del repuesto: "; getline(cin,R.marca);
+                    cout<<"Nombre del repuesto: "; cin>>R.nombre;
+                    cout<<"Modelo del carro: "; cin>>R.modelo_carro;
+                    cout<<"Anio del carro: "; cin>>R.anio_carro;
+                    cout<<"Precio del repuesto: "; cin>>R.precio;
+                    cout<<"Existencias del repuesto: "; cin>>R.existencias;
+                    string linea;
+                    ofstream Vout("./bin/temp.csv");
+                    while(getline(input, linea)){
+                        Vout<<linea<<endl;
+                    };
+                    Vout<<R.marca<<","<<R.nombre<<","<<R.modelo_carro<<","<<R.anio_carro<<","<<R.precio<<","<<R.existencias;
+                    cout<<"Desea confirmar los cambios? 1. Si | 2. No"<<endl; cin>>opciong;
+                    if(opciong == 1){
+                       input.close();
+                        Vout.close();
+                        remove("./bin/Repuestos.csv");
+                        rename("./bin/temp.csv","./bin/Repuestos.csv");
+                    } else if (opciong == 2){
+                        input.close();
+                        Vout.close();
+                        remove("./bin/temp.csv");
+                    }
                     break;
-                case 4: // Repuestos > Lectura
-                    // falta codigo
-                    break;
+                }
                 default:
-                    cout << "Opcion no valida" << endl;
+                    cout<<"Opcion no valida"<<endl;
                     break;
             }
             break;
         }
         default:
-            cout << "Opcion no valida" << endl;
+            cout<<"Opcion no valida"<<endl;
             break;
     }
     return 0;
