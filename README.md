@@ -1,4 +1,5 @@
 ESTRUCTURA DEL PROYECTO
+
 Carpetas: 
 - bin
   Contiene los archivos csv que administra el programa y el archivo ejecutable
@@ -12,8 +13,11 @@ Archivos
   Codigo fuente en lenguaje c++
 
 Cuidados
+
   Confirmar la existencia de los archivos de entrada del programa antes de ejecutarlo 
 
 Autores
+
 Luis Chow C.I: 30.551.013
+
 Jesus Quintero C.I: 31.775.209
