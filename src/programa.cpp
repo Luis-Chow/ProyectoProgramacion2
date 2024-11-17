@@ -120,6 +120,8 @@ int main(){
     int opcion1 = 0;
     int opcion2 = 0;
     int opciong = 0;
+    bool confirmar = false;
+    while (confirmar == false){
     cout<<"Que archivo desea leer? \n1 = Vehiculos | 2 = Clientes | 3 = Repuestos\n"; cin>>opcion1;
     ifstream input;
 
@@ -324,7 +326,8 @@ int main(){
                        input.close();
                         Vout.close();
                         remove("./bin/Repuestos.csv");
-                        rename("./bin/temp.csv","./bin/Repuestos.csv");
+                        rename("./bin/temp.csv"
+                        ,"./bin/Repuestos.csv");
                     } else if (opciong == 2){
                         input.close();
                         Vout.close();
@@ -358,5 +361,16 @@ int main(){
             cout<<"Opcion no valida"<<endl;
             break;
     }
-    return 0;
+    cout<<"Desea cerrar el programa? 1. Si | 2. No"<<endl; cin>>opciong;
+    if(opciong==1){
+        confirmar = true;
+        cout<<"Cerrando programa..."<<endl;
+    }else if(opciong==2){
+        confirmar = false;
+    }else{
+        cout<<"Opcion no valida, cerrando programa..."<<endl;
+        confirmar = true;
+    }
+    }
+return 0;
 }
