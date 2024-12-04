@@ -137,6 +137,10 @@ int main(){
             switch (opcion2) {
                 case 1: { // Vehiculos > Borrar
                     cout<<"Que fila desea borrar? "; cin>>opciong;
+                    if (opciong == 1){
+                        cout<<"No se puede borrar la fila 1 ya que es la cabecera del archivo..."<<endl;
+                        break;
+                    }
                     input.close();
                     borrarFilaCSV("./bin/Vehiculos.csv", opciong);
                     break;
@@ -223,6 +227,10 @@ int main(){
             switch (opcion2) {
                 case 1: { // Clientes > Borrar
                     cout<<"Que fila desea borrar? "; cin>>opciong;
+                    if (opciong == 1){
+                        cout<<"No se puede borrar la fila 1 ya que es la cabecera del archivo..."<<endl;
+                        break;
+                    }
                     input.close();
                     borrarFilaCSV("./bin/Clientes.csv", opciong);
                     break;
@@ -298,6 +306,10 @@ int main(){
             switch (opcion2) {
                 case 1: { // Repuestos > Borrar
                     cout<<"Que fila desea borrar? "; cin>>opciong;
+                    if (opciong == 1){
+                        cout<<"No se puede borrar la fila 1 ya que es la cabecera del archivo..."<<endl;
+                        break;
+                    }
                     input.close();
                     borrarFilaCSV("./bin/Repuestos.csv", opciong);
                     break;
