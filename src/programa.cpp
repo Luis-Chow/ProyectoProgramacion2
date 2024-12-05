@@ -151,18 +151,24 @@ int main(){
                     break;
                 } 
                 case 3: {  // Vehiculos Insercion
-                    cout<<"Ingrese los nuevos datos: \n" ; cin.ignore(100,'\n');
-                    cout<<"Modelo: "; getline(cin,V.modelo);
-                    cout<<"Marca: "; cin>>V.marca;
-                    cout<<"Placa: "; cin>>V.placa;
-                    cout<<"Color: "; cin>>V.color;
-                    cout<<"Fecha de lanzamiento: "; cin>> V.anio;
-                    cout<<"Kilometraje:"; cin>>V.kilometraje; cin.ignore(100,'\n');
-                    cout<<"Estado de renta (yes/no/pending):  "; getline(cin,V.rentado);
-                    cout<<"Motor: "; cin>>V.motor;
-                    cout<<"Precio de renta: "; cin>>V.precio_renta; 
-                    cout<<"Cedula del cliente: "; cin>>V.ced_cliente;
-                    cout<<"Fecha de entrega (dd/mm/yyyy):  "; cin>>V.fecha_de_entrega;
+                    cout<<"Ingrese los nuevos datos: \n"; cin.ignore(100, '\n');
+                    cout<<"Modelo: "; getline(cin, V.modelo);
+                    cout<<"Marca: "; getline(cin, V.marca);
+                    cout<<"Placa: "; getline(cin, V.placa);
+                    cout<<"Color: "; getline(cin, V.color);
+                    cout<<"Fecha de lanzamiento: "; cin >> V.anio;
+                    cout<<"Kilometraje: "; cin >> V.kilometraje; cin.ignore(100, '\n');
+                    cout<<"Estado de renta (Si | No): "; getline(cin, V.rentado);
+                    cout<<"Motor: "; getline(cin, V.motor);
+                    cout<<"Precio de renta: "; cin >> V.precio_renta;
+                    if (V.rentado == "Si" || V.rentado == "si" || V.rentado == "SI") {
+                        cout << "Cedula del cliente: "; cin >> V.ced_cliente;
+                        cout << "Fecha de entrega (dd/mm/yyyy): "; cin >> V.fecha_de_entrega;
+                    } else {
+                        V.ced_cliente = 0;
+                        V.fecha_de_entrega = "";
+                    }
+
                     string linea;
                     ofstream Vout("./bin/temp.csv");
                     while(getline(input, linea)){
@@ -196,14 +202,16 @@ int main(){
                             cout<<"Modelo: "<<modelo<<endl;
                             cout<<"Placa: "<<placa<<endl;
                             cout<<"Color: "<<color<<endl;
-                            cout<<"Fecha de lanzamiento: "<<anio<<endl;
+                            cout<<"Anio de lanzamiento: "<<anio<<endl;
                             cout<<"Kilometraje: "<<kilometraje<<endl;
                             cout<<"Rentado: "<<rentado<<endl;
                             cout<<"Motor: "<<motor<<endl;
                             cout<<"Precio de renta: "<<precio_renta<<endl;
-                            cout<<"Cedula del cliente: "<<ced_cliente<<endl;
-                            cout<<"Fecha de entrega: "<<fecha_de_entrega<<endl;
+                            if (V.rentado == "Si" || V.rentado == "si" || V.rentado == "SI") {
+                                cout << "Cedula del cliente: "; cout<<V.ced_cliente;
+                                cout << "Fecha de entrega (dd/mm/yyyy): "; cout<<V.fecha_de_entrega;
                         }
+                    }
                     }
                     input.close();
                     break;
@@ -248,7 +256,7 @@ int main(){
                     cout<<"Correo electronico: "; cin>>C.email;
                     cout<<"Cantidad de Vehiculos rentados: "; cin>> C.cantidad_vehiculos_rentados; cin.ignore(100,'\n');
                     cout<<"Direccion "; getline(cin, C.direccion);
-                    cout<<"El cliente se encuentra activo? (yes/no/pending) "; getline(cin,C.activo);
+                    cout<<"El cliente se encuentra activo? (Si | No) "; getline(cin,C.activo);
                     string linea;
                     ofstream Vout("./bin/temp.csv");
                     while(getline(input, linea)){
