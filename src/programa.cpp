@@ -63,7 +63,7 @@ void borrarFilaCSV(const string& archivo, int filaABorrar) {
         remove("temp.csv");
     }
 }
-void actualizarCSV(const string& archivo){
+void actualizarCSV_Vehiculos(const string& archivo){
     ifstream input(archivo);
     ofstream temp("temp.csv");
     int numero_fila=0;
@@ -71,8 +71,9 @@ void actualizarCSV(const string& archivo){
     string nuevoDato;
     string linea;
     int confirmar;
-    cout<< "Ingrese la fila a actualizar: "; cin>>fila_actualizar; fila_actualizar -=1;
-    cout<< "Ingrese el numero de columna a actualizar: "; cin>>columna_actualizar; columna_actualizar= columna_actualizar;
+    cout<< "Ingrese la fila a actualizar: " ; cin>>fila_actualizar; fila_actualizar -=1;
+    cout<< "Ingrese el dato a actualizar:  1. Modelo | 2. Marca | 3. Placa | 4.Color | 5.Anio | 6. Kilometraje |7.rentado | 8.Motor | 9.Precio_renta | 10.Ced_cliente | 11.Fecha_de_entrega " << endl; 
+    cin>>columna_actualizar; 
     cin.ignore(100,'\n');
     while(getline(input, linea)) {
         if (numero_fila==fila_actualizar){
@@ -99,20 +100,117 @@ void actualizarCSV(const string& archivo){
         }
         numero_fila++;
     }
+    input.close();
+    temp.close();
     cout<<"Quieres confirmar los cambios? 1. Si | 2. No: "; cin>>confirmar;
     if(confirmar==1){
-        input.close();
-        temp.close();
         remove(archivo.c_str());
         rename("temp.csv", archivo.c_str());
     } else if(confirmar==2){
-        input.close();
-        temp.close();
         remove("temp.csv");
     }else {
         cout<<"Error en la confirmacion, cancelando cambios...";
-        input.close();
-        temp.close();
+        remove("temp.csv");
+    }
+}
+void actualizarCSV_Clientes(const string& archivo){
+    ifstream input(archivo);
+    ofstream temp("temp.csv");
+    int numero_fila=0;
+    int fila_actualizar, columna_actualizar;
+    string nuevoDato;
+    string linea;
+    int confirmar;
+    cout<< "Ingrese la fila a actualizar: " ; cin>>fila_actualizar; fila_actualizar -=1;
+    cout<< "Ingrese el dato a actualizar:  1. Cedula del cliente | 2.Nombre | 3.Apellido | 4.Email | 5.Cantidad de Vehiculos Rentados | 6.Direccion | 7.Activo "<<endl; 
+    cin>>columna_actualizar; 
+    cin.ignore(100,'\n');
+    while(getline(input, linea)) {
+        if (numero_fila==fila_actualizar){
+            cout<< "Ingrese el nuevo dato: "; getline(cin,nuevoDato);
+            stringstream ss(linea);
+            string resto_de_fila;
+            int columna_actual= 1;
+            bool columna1= true;
+            while(getline(ss,resto_de_fila,',')){
+                if (!columna1){
+                    temp<<",";
+                }
+                if (columna_actual == columna_actualizar){
+                    temp<< nuevoDato;
+                } else {
+                    temp << resto_de_fila;
+                }
+                columna_actual++;
+                columna1= false;
+            }
+            temp<< endl;
+        } else{
+            temp<< linea << endl;
+        }
+        numero_fila++;
+    }
+    input.close();
+    temp.close();
+    cout<<"Quieres confirmar los cambios? 1. Si | 2. No: "; cin>>confirmar;
+    if(confirmar==1){
+        remove(archivo.c_str());
+        rename("temp.csv", archivo.c_str());
+    } else if(confirmar==2){
+        remove("temp.csv");
+    }else {
+        cout<<"Error en la confirmacion, cancelando cambios...";
+        remove("temp.csv");
+    }
+}
+
+void actualizarCSV_Repuestos(const string& archivo){
+    ifstream input(archivo);
+    ofstream temp("temp.csv");
+    int numero_fila=0;
+    int fila_actualizar, columna_actualizar;
+    string nuevoDato;
+    string linea;
+    int confirmar;
+    cout<< "Ingrese la fila a actualizar: " ; cin>>fila_actualizar; fila_actualizar -=1;
+    cout<< "Ingrese el dato a actualizar:  1.Marca | 2.Nombre | 3.Modelo_carro | 4.Anio_carro | 5.Precio | 6.Existencia "<<endl; 
+    cin>>columna_actualizar; 
+    cin.ignore(100,'\n');
+    while(getline(input, linea)) {
+        if (numero_fila==fila_actualizar){
+            cout<< "Ingrese el nuevo dato: "; getline(cin,nuevoDato);
+            stringstream ss(linea);
+            string resto_de_fila;
+            int columna_actual= 1;
+            bool columna1= true;
+            while(getline(ss,resto_de_fila,',')){
+                if (!columna1){
+                    temp<<",";
+                }
+                if (columna_actual == columna_actualizar){
+                    temp<< nuevoDato;
+                } else {
+                    temp << resto_de_fila;
+                }
+                columna_actual++;
+                columna1= false;
+            }
+            temp<< endl;
+        } else{
+            temp<< linea << endl;
+        }
+        numero_fila++;
+    }
+    input.close();
+    temp.close();
+    cout<<"Quieres confirmar los cambios? 1. Si | 2. No: "; cin>>confirmar;
+    if(confirmar==1){
+        remove(archivo.c_str());
+        rename("temp.csv", archivo.c_str());
+    } else if(confirmar==2){
+        remove("temp.csv");
+    }else {
+        cout<<"Error en la confirmacion, cancelando cambios...";
         remove("temp.csv");
     }
 }
@@ -147,7 +245,7 @@ int main(){
                 }
                 case 2: {  // Vehiculos Actualizar
                     input.close();
-                    actualizarCSV("./bin/Vehiculos.csv");
+                    actualizarCSV_Vehiculos("./bin/Vehiculos.csv");
                     break;
                 } 
                 case 3: {  // Vehiculos Insercion
@@ -245,7 +343,7 @@ int main(){
                 }
                 case 2: {  // Clientes > Actualizar
                     input.close();
-                    actualizarCSV("./bin/Clientes.csv");
+                    actualizarCSV_Clientes("./bin/Clientes.csv");
                     break;
                 } 
                 case 3: {   // Clientes > Insercion
@@ -324,7 +422,7 @@ int main(){
                 }
                 case 2: { // Repuestos > Actualizar
                     input.close();
-                    actualizarCSV("./bin/Repuestos.csv");
+                    actualizarCSV_Repuestos("./bin/Repuestos.csv");
                     break;
                 }
                 case 3: { // Repuestos > Insercion
