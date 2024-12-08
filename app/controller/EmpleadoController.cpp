@@ -3,7 +3,7 @@
 #include "../controller/RepuestosController.cpp"
 #include "../model/Usuario/Usuario.h"
 
-void Manager::clientes(){
+void Empleado::clientes_empleados(){
     Cliente c;
     int opcion, opciong;
     cout<<"CLIENTES"<<endl;
@@ -24,7 +24,7 @@ void Manager::clientes(){
     }
 }
 
-void Manager::vehiculos(){
+void Empleado::vehiculos_empleados(){
     Vehiculo v;
     int opcion;
     cout<<"VEHICULOS"<<endl;
@@ -38,7 +38,7 @@ void Manager::vehiculos(){
     }
 }
 
-void Manager::repuestos(){
+void Empleado::repuestos_empleados(){
     Repuesto r;
     int opcion;
     cout<<"REPUESTOS"<<endl;

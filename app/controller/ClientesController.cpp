@@ -3,8 +3,8 @@
 void Cliente::insercion(){
     int confirmar;
     string linea;
-    ifstream input("model/Clientes/Clientes.csv");
-    ofstream Vout("model/Clientes/temp.csv");
+    ifstream input("./model/Clientes/Clientes.csv");
+    ofstream Vout("./model/Clientes/temp.csv");
     cout<<"Cedula: "; cin>>cedula;
     cout<<"Nombre: "; cin>>nombre;
     cout<<"Apellido: "; cin>>apellido;
@@ -20,20 +20,20 @@ void Cliente::insercion(){
     Vout.close();
     input.close();
     if(confirmar==1){
-        remove("model/Clientes/Clientes.csv");
-        rename("model/Clientes/temp.csv", "model/Clientes/Clientes.csv");
+        remove("./model/Clientes/Clientes.csv");
+        rename("./model/Clientes/temp.csv", "./model/Clientes/Clientes.csv");
     } else if (confirmar==2){
-        remove("model/Clientes/temp.csv");
+        remove("./model/Clientes/temp.csv");
     } else {
         cout<<"Error en la confirmacion, cancelando cambios...";
-        remove("model/Clientes/temp.csv");
+        remove("./model/Clientes/temp.csv");
     }
 }
 
 void Cliente::borrar(){
     int confirmar;
-    ifstream input("model/Clientes/Clientes.csv");
-    ofstream temp("model/Clientes/temp.csv");
+    ifstream input("./model/Clientes/Clientes.csv");
+    ofstream temp("./model/Clientes/temp.csv");
     int numero_fila=1;
     int filaABorrar;
     cout<< "Ingrese la fila a borrar: " ; cin>>filaABorrar;
@@ -52,16 +52,16 @@ void Cliente::borrar(){
     temp.close();
     cout<<"Desea confirmar el cambio?  1. Si |  2. No"<<endl; cin>>confirmar;
     if (confirmar==1){
-        remove("model/Clientes/Clientes.csv");
-        rename("model/Clientes/temp.csv", "model/Clientes/Clientes.csv");
+        remove("./model/Clientes/Clientes.csv");
+        rename("./model/Clientes/temp.csv", "model/Clientes/Clientes.csv");
     } else if (confirmar==2){
-        remove("model/Clientes/temp.csv");
+        remove("./model/Clientes/temp.csv");
     }
 }
 
 void Cliente:: actualizar(){
-    ifstream input("model/Clientes/Clientes.csv");
-    ofstream temp("model/Clientes/temp.csv");
+    ifstream input("./model/Clientes/Clientes.csv");
+    ofstream temp("./model/Clientes/temp.csv");
     int numero_fila=0;
     int fila_actualizar, columna_actualizar;
     string nuevoDato;
@@ -100,18 +100,18 @@ void Cliente:: actualizar(){
     temp.close();
     cout<<"Quieres confirmar los cambios? 1. Si | 2. No: "; cin>>confirmar;
     if(confirmar==1){
-        remove("model/Clientes/Clientes.csv");
-        rename("model/Clientes/temp.csv", "model/Clientes/Clientes.csv");
+        remove("./model/Clientes/Clientes.csv");
+        rename("./model/Clientes/temp.csv", "./model/Clientes/Clientes.csv");
     } else if(confirmar==2){
         remove("model/Clientes/temp.csv");
     }else {
         cout<<"Error en la confirmacion, cancelando cambios...";
-        remove("model/Clientes/temp.csv");
+        remove("./model/Clientes/temp.csv");
     }
 }
 
 void Cliente::consulta(){
-    ifstream input("model/Clientes/Clientes.csv");
+    ifstream input("./model/Clientes/Clientes.csv");
     string cedula_consulta;
     cout<<"Introduzca la cedula de identidad del cliente a consultar: "; cin>>cedula_consulta;
     string linea;

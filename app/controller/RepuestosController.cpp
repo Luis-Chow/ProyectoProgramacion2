@@ -4,8 +4,8 @@
 void Repuesto::insercion(){
     string linea;
     int confirmar;
-    ifstream input("model/Repuestos/Repuestos.csv");
-    ofstream Vout("model/Repuestos/temp.csv");
+    ifstream input("./model/Repuestos/Repuestos.csv");
+    ofstream Vout("./model/Repuestos/temp.csv");
     cout<<"Marca del repuesto: "; getline(cin,marca);
     cout<<"Nombre del repuesto: "; cin>>nombre;
     cout<<"Modelo del carro: "; cin>>modelo_carro;
@@ -20,18 +20,18 @@ void Repuesto::insercion(){
     input.close();
     cout<<"Desea confirmar la insercion? 1. Si | 2. No"<<endl; cin>>confirmar;
     if (confirmar==1){
-        remove("model/Repuestos/Repuestos.csv");
-        rename("model/Repuestos/temp.csv", "model/Repuestos/Repuestos.csv");
+        remove("./model/Repuestos/Repuestos.csv");
+        rename("./model/Repuestos/temp.csv", "./model/Repuestos/Repuestos.csv");
     } else if (confirmar==2){
-        remove("model/Repuestos/temp.csv");
+        remove("./model/Repuestos/temp.csv");
     }
 
 }
 
 void Repuesto::borrar(){
     int confirmar;
-    ifstream input("model/Repuestos/Repuestos.csv");
-    ofstream temp("model/Repuestos/temp.csv");
+    ifstream input("./model/Repuestos/Repuestos.csv");
+    ofstream temp("./model/Repuestos/temp.csv");
     int numero_fila=1;
     int filaABorrar;
     cout<< "Ingrese la fila a borrar: " ; cin>>filaABorrar; 
@@ -50,16 +50,16 @@ void Repuesto::borrar(){
     temp.close();
     cout<<"Desea confirmar el cambio?  1. Si |  2. No"<<endl; cin>>confirmar;
     if (confirmar==1){
-        remove("model/Repuestos/Repuestos.csv");
-        rename("model/Repuestos/temp.csv", "model/Repuestos/Repuestos.csv");
+        remove("./model/Repuestos/Repuestos.csv");
+        rename("./model/Repuestos/temp.csv", "./model/Repuestos/Repuestos.csv");
     } else if (confirmar==2){
-        remove("model/Repuestos/temp.csv");
+        remove("./model/Repuestos/temp.csv");
     }
 }
 
 void Repuesto:: actualizar(){
-    ifstream input("model/Repuestos/Repuestos.csv");
-    ofstream temp("model/Repuestos/temp.csv");
+    ifstream input("./model/Repuestos/Repuestos.csv");
+    ofstream temp("./model/Repuestos/temp.csv");
     int numero_fila=0;
     int fila_actualizar, columna_actualizar;
     string nuevoDato;
@@ -98,18 +98,18 @@ void Repuesto:: actualizar(){
     temp.close();
     cout<<"Quieres confirmar los cambios? 1. Si | 2. No: "; cin>>confirmar;
     if(confirmar==1){
-        remove("model/Repuestos/Repuestos.csv");
-        rename("model/Repuestos/temp.csv", "model/Repuestos/Repuestos.csv");
+        remove("./model/Repuestos/Repuestos.csv");
+        rename("./model/Repuestos/temp.csv", "./model/Repuestos/Repuestos.csv");
     } else if(confirmar==2){
-        remove("model/Repuestos/temp.csv");
+        remove("./model/Repuestos/temp.csv");
     }else {
         cout<<"Error en la confirmacion, cancelando cambios...";
-        remove("model/Repuestos/temp.csv");
+        remove("./model/Repuestos/temp.csv");
     }
 }
 
 void Repuesto::consulta(){
-    ifstream input("model/Repuestos/Repuestos.csv");
+    ifstream input("./model/Repuestos/Repuestos.csv");
     string linea;
     string nombre_consulta;
     cout<<"Introduzca el nombre del repuesto a consultar (minusculas): "; cin>>nombre_consulta;

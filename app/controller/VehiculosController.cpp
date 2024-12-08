@@ -5,8 +5,8 @@
 void Vehiculo::insercion(){
     string linea;
     int confirmar;
-    ifstream input("model/Vehiculos/Vehiculos.csv");
-    ofstream Vout("model/Vehiculos/temp.csv");
+    ifstream input("./model/Vehiculos/Vehiculos.csv");
+    ofstream Vout("./model/Vehiculos/temp.csv");
     cout<<"Marca del vehiculo: "; getline(cin,marca);
     cout<<"Modelo del vehiculo: "; getline(cin,modelo);
     cout<<"Anio del vehiculo: "; cin>>anio;
@@ -31,17 +31,17 @@ void Vehiculo::insercion(){
     input.close();
     cout<<"Desea confirmar el cambio?  1. Si |  2. No"<<endl; cin>>confirmar;
     if (confirmar==1){
-        remove("model/Vehiculos/Vehiculos.csv");
-        rename("model/Vehiculos/temp.csv", "model/Vehiculos/Vehiculos.csv");
+        remove("./model/Vehiculos/Vehiculos.csv");
+        rename("./model/Vehiculos/temp.csv", "./model/Vehiculos/Vehiculos.csv");
     } else if (confirmar==2){
-        remove("model/Vehiculos/temp.csv");
+        remove("./model/Vehiculos/temp.csv");
     }
 }
 void Vehiculo:: borrar(){
     int filaAborrar;
     int confirmar;
-    ifstream input("model/Vehiculos/Vehiculos.csv");
-    ofstream temp("model/Vehiculos/temp.csv");
+    ifstream input("./model/Vehiculos/Vehiculos.csv");
+    ofstream temp("./model/Vehiculos/temp.csv");
     string linea;
     int numero_fila=1;
     cout<<"Ingrese la fila a borrar: "; cin>>filaAborrar;
@@ -59,15 +59,15 @@ void Vehiculo:: borrar(){
     temp.close();
     cout<<"Desea confirmar el cambio?  1. Si |  2. No"<<endl; cin>>confirmar;
     if (confirmar==1){
-        remove("model/Vehiculos/Vehiculos.csv");
-        rename("model/Vehiculos/temp.csv", "model/Vehiculos/Vehiculos.csv");
+        remove("./model/Vehiculos/Vehiculos.csv");
+        rename("./model/Vehiculos/temp.csv", "./model/Vehiculos/Vehiculos.csv");
     } else if (confirmar==2){
-        remove("model/Vehiculos/temp.csv");
+        remove("./model/Vehiculos/temp.csv");
     }
 }
 void Vehiculo::actualizar() {
-    ifstream input("model/Vehiculos/Vehiculos.csv");
-    ofstream temp("model/Vehiculos/temp.csv");
+    ifstream input("./model/Vehiculos/Vehiculos.csv");
+    ofstream temp("./model/Vehiculos/temp.csv");
     int numero_fila = 0;
     int fila_actualizar, columna_actualizar;
     string nuevoDato;
@@ -106,18 +106,18 @@ void Vehiculo::actualizar() {
     temp.close();
     cout << "Desea confirmar el cambio?  1. Si |  2. No" << endl; cin >> confirmar;
     if (confirmar == 1) {
-        remove("model/Vehiculos/Vehiculos.csv");
-        rename("model/Vehiculos/temp.csv", "model/Vehiculos/Vehiculos.csv");
+        remove("./model/Vehiculos/Vehiculos.csv");
+        rename("./model/Vehiculos/temp.csv", "./model/Vehiculos/Vehiculos.csv");
     } else if (confirmar == 2) {
-        remove("model/Vehiculos/temp.csv");
+        remove("./model/Vehiculos/temp.csv");
     } else {
         cout << "Opción no válida, cancelando cambios...";
-        remove("model/Vehiculos/temp.csv");
+        remove("./model/Vehiculos/temp.csv");
     }
 }
 void Vehiculo::consulta(){
     string placa_consulta;
-    ifstream input("model/Vehiculos/Vehiculos.csv");
+    ifstream input("./model/Vehiculos/Vehiculos.csv");
     string linea;
     cout<<"Introduzca la placa del vehiculo que desea consultar: "; cin>>placa_consulta;
     while(getline(input, linea)){
