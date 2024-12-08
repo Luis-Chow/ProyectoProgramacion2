@@ -4,19 +4,19 @@
 #include "../model/Usuario/Usuario.h"
 
 
-void Admin::crearCopiaSeguridad(){
+void Admin::crearCopiaSeguridad_admin(){
     string archivo;
     int opcion;
     cout<<"Copia de seguridad"<<endl;
     cout<<"Que archivo desea respaldar? /n1 = Vehiculos | 2 = Clientes | 3 = Repuestos/n"; cin>>opcion;
     if (opcion==1){
-        archivo = "model/Vehiculos/Vehiculos.csv";
+        archivo = "../model/Vehiculos/Vehiculos.csv";
     }
     if (opcion==2){
-        archivo = "model/Clientes/Clientes.csv";
+        archivo = "../model/Clientes/Clientes.csv";
     }
     if (opcion==3){
-        archivo = "model/Repuestos/Repuestos.csv";
+        archivo = "../model/Repuestos/Repuestos.csv";
     }
     time_t now = time(0);
     tm *ltm = localtime(&now);
@@ -33,11 +33,11 @@ void Admin::crearCopiaSeguridad(){
 
     cout << "Copia de seguridad creada: " << backupFileName << endl;
 }
-void Admin :: vehiculos(){
+void Admin :: vehiculos_admin(){
     Vehiculo v;
     int opcion;
     cout <<"VEHICULOS"<<endl;
-    cout<<"Que accion desea realizar? /n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta/n"; cin>>opcion;
+    cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta\n"; cin>>opcion;
     if (opcion==1){
         v.borrar();
     }
@@ -52,7 +52,7 @@ void Admin :: vehiculos(){
     }
 }
 
-void Admin::clientes(){
+void Admin::clientes_admin(){
     Cliente c;
     int opcion;
     cout<<"CLIENTES"<<endl;
@@ -71,7 +71,7 @@ void Admin::clientes(){
     }
 }
 
-void Admin::repuestos(){
+void Admin::repuestos_admin(){
     Repuesto r;
     int opcion;
     cout<<"REPUESTOS"<<endl;
@@ -87,21 +87,5 @@ void Admin::repuestos(){
     }
     if (opcion==4){
         r.consulta();
-    }
-}
-
-void Admin::crearCopiaSeguridad(){
-    string archivo;
-    int opcion;
-    cout<<"Copia de seguridad"<<endl;
-    cout<<"Que archivo desea respaldar? /n1 = Vehiculos | 2 = Clientes | 3 = Repuestos/n"; cin>>opcion;
-    if (opcion==1){
-        archivo = "model/Vehiculos/Vehiculos.csv";
-    }
-    if (opcion==2){
-        archivo = "model/Clientes/Clientes.csv";
-    }
-    if (opcion==3){
-        archivo = "model/Repuestos/Repuestos.csv";
     }
 }

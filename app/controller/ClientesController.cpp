@@ -1,32 +1,46 @@
 #include "../model/Clientes/Clientes.h"
 
-
 void Cliente::insercion(){
     int confirmar;
-    ofstream Vout("model/Clientes/Clientes.csv");
+    string linea;
+    ifstream input("model/Clientes/Clientes.csv");
+    ofstream Vout("model/Clientes/temp.csv");
     cout<<"Cedula: "; cin>>cedula;
     cout<<"Nombre: "; cin>>nombre;
     cout<<"Apellido: "; cin>>apellido;
     cout<<"Correo electronico: "; cin>>email;
-    cout<<"Cantidad de Vehiculos rentados: "; cin>> cantidad_vehiculos_rentados; cin.ignore(100,'/n');
+    cout<<"Cantidad de Vehiculos rentados: "; cin>> cantidad_vehiculos_rentados; cin.ignore(100,'\n');
     cout<<"Direccion "; getline(cin, direccion);
     cout<<"El cliente se encuentra activo? (Si | No) "; getline(cin,activo);
-    cout<<"Desea confirmar los cambios? 1. Si | 2. No"<<endl; cin>>confirmar;
-    if(confirmar==1){
-        Vout<<cedula<<","<<nombre<<","<<apellido<<","<<email<<","<<cantidad_vehiculos_rentados<<","<<direccion<<","<<activo;
-    } else if (confirmar==2){
-        cout<<"Cancelando cambios..."<<endl;
+    while(getline(input, linea)){
+        Vout<<linea<<endl;
     }
+    Vout<<cedula<<","<<nombre<<","<<apellido<<","<<email<<","<<cantidad_vehiculos_rentados<<","<<direccion<<","<<activo;   
+    cout<<"Desea confirmar los cambios? 1. Si | 2. No"<<endl; cin>>confirmar;
     Vout.close();
+    input.close();
+    if(confirmar==1){
+        remove("model/Clientes/Clientes.csv");
+        rename("model/Clientes/temp.csv", "model/Clientes/Clientes.csv");
+    } else if (confirmar==2){
+        remove("model/Clientes/temp.csv");
+    } else {
+        cout<<"Error en la confirmacion, cancelando cambios...";
+        remove("model/Clientes/temp.csv");
+    }
 }
 
 void Cliente::borrar(){
     int confirmar;
     ifstream input("model/Clientes/Clientes.csv");
     ofstream temp("model/Clientes/temp.csv");
-    int numero_fila=0;
+    int numero_fila=1;
     int filaABorrar;
-    cout<< "Ingrese la fila a borrar: " ; cin>>filaABorrar; filaABorrar -=1;
+    cout<< "Ingrese la fila a borrar: " ; cin>>filaABorrar;
+    if(filaABorrar == 1){
+        cout<<"No se puede borrar la fila 1 ya que es la cabecera del archivo..."<<endl;
+        return;
+    }
     string linea;
     while(getline(input, linea)) {
         if (numero_fila != filaABorrar) {
@@ -56,7 +70,7 @@ void Cliente:: actualizar(){
     cout<< "Ingrese la fila a actualizar: " ; cin>>fila_actualizar; fila_actualizar -=1;
     cout<< "Ingrese el dato a actualizar:  1. Cedula del cliente | 2.Nombre | 3.Apellido | 4.Email | 5.Cantidad de Vehiculos Rentados | 6.Direccion | 7.Activo "<<endl; 
     cin>>columna_actualizar; 
-    cin.ignore(100,'/n');
+    cin.ignore(100,'\n');
     while(getline(input, linea)) {
         if (numero_fila==fila_actualizar){
             cout<< "Ingrese el nuevo dato: "; getline(cin,nuevoDato);

@@ -2,29 +2,26 @@
 #include <fstream>
 #include <ctime>
 #include <sstream>
-#include "../controller/ClientesController.cpp"
-#include "../controller/VehiculosController.cpp"
-#include "../controller/RepuestosController.cpp"
 using namespace std;
 
 class Admin{
     public:
-    void vehiculos();
-    void repuestos();
-    void clientes();
-    void crearCopiaSeguridad();
+    void vehiculos_admin();
+    void repuestos_admin();
+    void clientes_admin();
+    void crearCopiaSeguridad_admin();
 };
 
 class Manager{
     public:
-    void vehiculos();
-    void repuestos();
-    void clientes();
+    void vehiculos_manager();
+    void repuestos_manager();
+    void clientes_manager();
 };
 
 class Empleado{
     public:
-    void vehiculos();
-    void repuestos();
-    void clientes();
+    void vehiculos_empleados();
+    void repuestos_empleados();
+    void clientes_empleados();
 };
