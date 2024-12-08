@@ -1,7 +1,5 @@
 #include "../model/Repuestos/Repuestos.h"
-#include <iostream>
 
-using namespace std;
 
 void Repuesto::insercion(){
     ofstream Vout("model/Repuestos/Repuestos.csv");

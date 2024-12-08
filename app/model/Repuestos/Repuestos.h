@@ -17,4 +17,5 @@ class Repuesto{
     void insercion();
     void borrar();
     void actualizar();
+    void consulta();
 };

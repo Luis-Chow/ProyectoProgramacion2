@@ -1,7 +1,6 @@
 #include "../model/Vehiculos/vehiculos.h"
-#include <iostream>
 
-using namespace std;
+
 
 void Vehiculo::insercion(){
     ofstream Vout("model/Vehiculos/Vehiculos.csv");
@@ -26,7 +25,7 @@ void Vehiculo::insercion(){
 }
 void Vehiculo:: borrar(){
     int confirmar;
-    ifstream input("ProyectoProgramacion2/app/model/Vehiculos/Vehiculos.csv, ios");
+    ifstream input("ProyectoProgramacion2/app/model/Vehiculos/Vehiculos.csv");
     ofstream temp("temp.csv");
     string linea;
     int numero_fila=1;
@@ -95,4 +94,33 @@ void Vehiculo::actualizar() {
         cout << "Opción no válida, cancelando cambios...";
         remove("temp.csv");
     }
+}
+void Vehiculo::consulta(){
+    string placa_consulta;
+    ifstream input("ProyectoProgramacion2/app/model/Vehiculos/Vehiculos.csv");
+    string linea;
+    cout<<"Introduzca la placa del vehiculo que desea consultar: "; cin>>placa_consulta;
+    while(getline(input, linea)){
+        stringstream ss(linea);
+        string marca, modelo, placa, color, anio, kilometraje, rentado, motor, precio_renta, ced_cliente, fecha_de_entrega;
+        getline(ss, marca, ','); getline(ss, modelo, ','); getline(ss, placa, ','); getline(ss, color, ',');
+        getline(ss, anio, ','); getline(ss, kilometraje, ','); getline(ss, rentado, ','); getline(ss, motor, ',');
+        getline(ss, precio_renta, ','); getline(ss, ced_cliente, ','); getline(ss, fecha_de_entrega, ',');
+        if (placa == placa_consulta){
+            cout<<"Marca: "<<marca<<endl;
+            cout<<"Modelo: "<<modelo<<endl;
+            cout<<"Placa: "<<placa<<endl;
+            cout<<"Color: "<<color<<endl;
+            cout<<"Anio de lanzamiento: "<<anio<<endl;
+            cout<<"Kilometraje: "<<kilometraje<<endl;
+            cout<<"Rentado: "<<rentado<<endl;
+            cout<<"Motor: "<<motor<<endl;
+            cout<<"Precio de renta: "<<precio_renta<<endl;
+            if (rentado == "Si" || rentado == "si" || rentado == "SI") {
+                cout<<"Cedula del cliente: "<<ced_cliente<<endl;
+                cout<<"Fecha de entrega: "<<fecha_de_entrega<<endl;
+            }
+        }
+    }
+    input.close();
 }

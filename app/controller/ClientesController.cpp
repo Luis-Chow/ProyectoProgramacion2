@@ -1,7 +1,5 @@
 #include "../model/Clientes/Clientes.h"
-#include <iostream>
 
-using namespace std;
 
 void Cliente::insercion(){
     int confirmar;
@@ -96,4 +94,27 @@ void Cliente:: actualizar(){
         cout<<"Error en la confirmacion, cancelando cambios...";
         remove("model/Clientes/temp.csv");
     }
+}
+
+void Cliente::consulta(){
+    ifstream input("model/Clientes/Clientes.csv");
+    string cedula_consulta;
+    cout<<"Introduzca la cedula de identidad del cliente a consultar: "; cin>>cedula_consulta;
+    string linea;
+    while (getline(input, linea)) {
+        stringstream ss(linea);
+        string ced_cliente, nombre, apellido, email, cantidad_vehiculos_rentados, direccion, activo;
+        getline(ss, ced_cliente, ','); getline(ss, nombre, ','); getline(ss, apellido, ','); getline(ss, email, ',');
+        getline(ss, cantidad_vehiculos_rentados, ','); getline(ss, direccion, ','); getline(ss, activo, ',');
+        if (ced_cliente == cedula_consulta){
+            cout<<"Cedula del cliente: "<<ced_cliente<<endl;
+            cout<<"Nombre: "<<nombre<<endl;
+            cout<<"Apellido: "<<apellido<<endl;
+            cout<<"Email: "<<email<<endl;
+            cout<<"Cantidad de vehiculos rentados: "<<cantidad_vehiculos_rentados<<endl;
+            cout<<"Direccion: "<<direccion<<endl;
+            cout<<"Activo: "<<activo<<endl;
+        }
+    }
+    input.close();
 }
