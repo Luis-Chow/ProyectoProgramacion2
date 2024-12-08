@@ -74,7 +74,7 @@ void actualizarCSV_Vehiculos(const string& archivo){
     cout<< "Ingrese la fila a actualizar: " ; cin>>fila_actualizar; fila_actualizar -=1;
     cout<< "Ingrese el dato a actualizar:  1. Modelo | 2. Marca | 3. Placa | 4.Color | 5.Anio | 6. Kilometraje |7.rentado | 8.Motor | 9.Precio_renta | 10.Ced_cliente | 11.Fecha_de_entrega " << endl; 
     cin>>columna_actualizar; 
-    cin.ignore(100,'\n');
+    cin.ignore(100,'/n');
     while(getline(input, linea)) {
         if (numero_fila==fila_actualizar){
             cout<< "Ingrese el nuevo dato: "; getline(cin,nuevoDato);
@@ -124,7 +124,7 @@ void actualizarCSV_Clientes(const string& archivo){
     cout<< "Ingrese la fila a actualizar: " ; cin>>fila_actualizar; fila_actualizar -=1;
     cout<< "Ingrese el dato a actualizar:  1. Cedula del cliente | 2.Nombre | 3.Apellido | 4.Email | 5.Cantidad de Vehiculos Rentados | 6.Direccion | 7.Activo "<<endl; 
     cin>>columna_actualizar; 
-    cin.ignore(100,'\n');
+    cin.ignore(100,'/n');
     while(getline(input, linea)) {
         if (numero_fila==fila_actualizar){
             cout<< "Ingrese el nuevo dato: "; getline(cin,nuevoDato);
@@ -175,7 +175,7 @@ void actualizarCSV_Repuestos(const string& archivo){
     cout<< "Ingrese la fila a actualizar: " ; cin>>fila_actualizar; fila_actualizar -=1;
     cout<< "Ingrese el dato a actualizar:  1.Marca | 2.Nombre | 3.Modelo_carro | 4.Anio_carro | 5.Precio | 6.Existencia "<<endl; 
     cin>>columna_actualizar; 
-    cin.ignore(100,'\n');
+    cin.ignore(100,'/n');
     while(getline(input, linea)) {
         if (numero_fila==fila_actualizar){
             cout<< "Ingrese el nuevo dato: "; getline(cin,nuevoDato);
@@ -220,13 +220,13 @@ int main(){
     int opciong = 0;
     bool confirmar = false;
     while (confirmar == false){
-    cout<<"Que archivo desea leer? \n1 = Vehiculos | 2 = Clientes | 3 = Repuestos\n"; cin>>opcion1;
+    cout<<"Que archivo desea leer? /n1 = Vehiculos | 2 = Clientes | 3 = Repuestos/n"; cin>>opcion1;
     ifstream input;
 
     switch (opcion1){
         case 1: {  // Vehiculos
             cout<<"VEHICULOS"<<endl;
-            cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta\n"; cin>>opcion2;
+            cout<<"Que accion desea realizar? /n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta/n"; cin>>opcion2;
             input.open("./bin/Vehiculos.csv");
             if (!input.is_open()) {
                 cout<<"Error al abrir el archivo Vehiculos.csv"<<endl;
@@ -249,13 +249,13 @@ int main(){
                     break;
                 } 
                 case 3: {  // Vehiculos Insercion
-                    cout<<"Ingrese los nuevos datos: \n"; cin.ignore(100, '\n');
+                    cout<<"Ingrese los nuevos datos: /n"; cin.ignore(100, '/n');
                     cout<<"Modelo: "; getline(cin, V.modelo);
                     cout<<"Marca: "; getline(cin, V.marca);
                     cout<<"Placa: "; getline(cin, V.placa);
                     cout<<"Color: "; getline(cin, V.color);
                     cout<<"Fecha de lanzamiento: "; cin >> V.anio;
-                    cout<<"Kilometraje: "; cin >> V.kilometraje; cin.ignore(100, '\n');
+                    cout<<"Kilometraje: "; cin >> V.kilometraje; cin.ignore(100, '/n');
                     cout<<"Estado de renta (Si | No): "; getline(cin, V.rentado);
                     cout<<"Motor: "; getline(cin, V.motor);
                     cout<<"Precio de renta: "; cin >> V.precio_renta;
@@ -324,7 +324,7 @@ int main(){
         }
         case 2: { // Clientes
             cout<<"CLIENTES"<<endl;
-            cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta\n"; cin>>opcion2;
+            cout<<"Que accion desea realizar? /n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta/n"; cin>>opcion2;
             input.open("./bin/Clientes.csv");
             if (!input.is_open()) {
                 cout<<"Error al abrir el archivo Clientes.csv"<<endl;
@@ -347,12 +347,12 @@ int main(){
                     break;
                 } 
                 case 3: {   // Clientes > Insercion
-                    cout<<"Ingrese los nuevos datos: \n" ; cin.ignore(100,'\n');
+                    cout<<"Ingrese los nuevos datos: /n" ; cin.ignore(100,'/n');
                     cout<<"Cedula: "; cin>>C.cedula;
                     cout<<"Nombre: "; cin>>C.nombre;
                     cout<<"Apellido: "; cin>>C.apellido;
                     cout<<"Correo electronico: "; cin>>C.email;
-                    cout<<"Cantidad de Vehiculos rentados: "; cin>> C.cantidad_vehiculos_rentados; cin.ignore(100,'\n');
+                    cout<<"Cantidad de Vehiculos rentados: "; cin>> C.cantidad_vehiculos_rentados; cin.ignore(100,'/n');
                     cout<<"Direccion "; getline(cin, C.direccion);
                     cout<<"El cliente se encuentra activo? (Si | No) "; getline(cin,C.activo);
                     string linea;
@@ -403,7 +403,7 @@ int main(){
         }
         case 3: { // Repuestos
             cout<<"REPUESTOS"<<endl;
-            cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta\n"; cin>>opcion2;
+            cout<<"Que accion desea realizar? /n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta/n"; cin>>opcion2;
             input.open("./bin/Repuestos.csv");
             if (!input.is_open()) {
                 cout<<"Error al abrir el archivo repuestos.csv"<<endl;
@@ -426,7 +426,7 @@ int main(){
                     break;
                 }
                 case 3: { // Repuestos > Insercion
-                    cout<<"Ingrese los nuevos datos: \n" ; cin.ignore(100,'\n');
+                    cout<<"Ingrese los nuevos datos: /n" ; cin.ignore(100,'/n');
                     cout<<"Marca del repuesto: "; getline(cin,R.marca);
                     cout<<"Nombre del repuesto: "; cin>>R.nombre;
                     cout<<"Modelo del carro: "; cin>>R.modelo_carro;
@@ -454,7 +454,7 @@ int main(){
                     break;
                 }
                 case 4: { // Repuestos > Consulta
-                    string linea; cin.ignore(100,'\n');
+                    string linea; cin.ignore(100,'/n');
                     cout<<"Introduzca el nombre del repuesto a consultar (minusculas): "; getline(cin,R.nombre);
                     cout<<"Marca | Nombre | Modelo del carro | Anio | Precio | Existencias:"<<endl;
                     while (getline(input, linea)) {
