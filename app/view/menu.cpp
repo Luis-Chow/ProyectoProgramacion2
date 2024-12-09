@@ -1,21 +1,4 @@
-
-#include"../controller/AdminController.cpp"
-
-void registro(const std::string& nombre, int opcion1) {
-    std::ofstream archivo("../model/Usuario/Usuarios.csv", std::ios::app);
-    if (archivo.is_open()) {
-        if(opcion1 == 1){
-            archivo << nombre << "," << "Admin"<< "\n";
-            archivo.close();
-        } else if (opcion1 == 2){
-            archivo << nombre << "," << "Manager"<< "\n";
-            archivo.close();
-        } else if (opcion1 == 3){
-            archivo << nombre << "," << "Empleado"<< "\n";
-            archivo.close();
-        }
-    }
-}
+#include "../controller/UsuariosController.cpp"
 
 int main(){
     bool salir = false;
@@ -35,12 +18,13 @@ int main(){
     switch(opcion1){
         case 1:
             Admin a;
-            cout << "Bienvenido " << nombre << "Eres un admin" <<endl;
+            cout << "Bienvenido " << nombre << ", Eres un admin" <<endl;
             cout << "Que accion desea realizar? " <<endl;
             cout << "1. Manejar el archivo de vehiculos" << endl;
             cout << "2. Manejar el archivo de clientes" << endl;
             cout << "3. Manejar el archivo de repuestos" << endl;
-            cout << "4. Crear copia de seguridad" << endl; cin >> opcion2;
+            cout << "4. Manejar el archivo de usuarios" << endl; 
+            cout << "5. Crear copia de seguridad"<< endl; cin >> opcion2;
             switch(opcion2){
                 case 1:
                     a.vehiculos_admin();
@@ -52,6 +36,9 @@ int main(){
                     a.repuestos_admin();
                     break;
                 case 4:
+                    a.usuarios_admin();
+                    break;
+                case 5:
                     a.copia_seguridad();
                     break;
                 default:
@@ -61,11 +48,12 @@ int main(){
             break;
         case 2:
             Manager m;
-            cout << "Bienvenido " << nombre << "Eres un manager" << endl;
+            cout << "Bienvenido " << nombre << ", Eres un manager" << endl;
             cout << "Que accion desea realizar? " << endl;
             cout << "1. Manejar el archivo de vehiculos" << endl;
             cout << "2. Manejar el archivo de clientes" << endl;
-            cout << "3. Manejar el archivo de repuestos" << endl; cin >> opcion2;
+            cout << "3. Manejar el archivo de repuestos" << endl; 
+            cout << "4. Manejar el archivo de usuario" << endl; cin >> opcion2;
             switch(opcion2){
                 case 1:
                     m.vehiculos_manager();
@@ -76,6 +64,9 @@ int main(){
                 case 3:
                     m.repuestos_manager();
                     break;
+                case 4:
+                    m.usuarios_manager();
+                    break;
                 default:
                     cout << "Opcion no valida" << endl;
                     break;
@@ -83,7 +74,7 @@ int main(){
             break;
         case 3:
             Empleado e;
-            cout << "Bienvenido " << nombre << "Eres un empleado" << endl;
+            cout << "Bienvenido " << nombre << ", Eres un empleado" << endl;
             cout << "Que accion desea realizar? " << endl;
             cout << "1. Asociado a vehiculos" << endl;
             cout << "2. Asociado a clientes" << endl;
