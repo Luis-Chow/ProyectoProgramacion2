@@ -1,15 +1,36 @@
 
 #include"../controller/AdminController.cpp"
 
+void registro(const std::string& nombre, int opcion1) {
+    std::ofstream archivo("../model/Usuario/Usuarios.csv", std::ios::app);
+    if (archivo.is_open()) {
+        if(opcion1 == 1){
+            archivo << nombre << "," << "Admin"<< "\n";
+            archivo.close();
+        } else if (opcion1 == 2){
+            archivo << nombre << "," << "Manager"<< "\n";
+            archivo.close();
+        } else if (opcion1 == 3){
+            archivo << nombre << "," << "Empleado"<< "\n";
+            archivo.close();
+        }
+    }
+}
+
 int main(){
     bool salir = false;
     string nombre;
     int opcion1, opcion2;
     cout << "SISTEMA DE GERENCIA" << endl;
-    cout << "Por favor ingrese su Nombre completo" << endl; 
+    cout << "Por favor ingrese su Nombre (*Nombre* *Apellido*)" << endl; 
     getline(cin, nombre);
     cout << "Por favor ingrese su tipo de usuario" << endl;
     cout << "1 = Admin | 2 = Manager | 3 = Empleado" << endl; cin >> opcion1;
+    if(opcion1<0 && opcion1>4){
+        cout << "Opcion no valida" << endl;
+        return 0;
+    }
+    registro(nombre, opcion1);
 
     switch(opcion1){
         case 1:
