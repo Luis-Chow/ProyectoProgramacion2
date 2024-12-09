@@ -1,7 +1,7 @@
 #include "../controller/ClientesController.cpp"
 #include "../controller/VehiculosController.cpp"
 #include "../controller/RepuestosController.cpp"
-#include "../model/Usuario/Usuario.h"
+#include "../model/Usuario/Empleado.h"
 
 void Empleado::clientes_empleados(){
     Cliente c;
@@ -28,7 +28,7 @@ void Empleado::vehiculos_empleados(){
     Vehiculo v;
     int opcion;
     cout<<"VEHICULOS"<<endl;
-    cout<<"Que accion desea realizar? 1. Consultar | 2.Actualizar " <<endl; cin>>opcion;
+    cout<<"Que accion desea realizar? 1. Consultar | 2.Actualizar (Realizar una venta) " <<endl; cin>>opcion;
     if (opcion==1){
         v.consulta();
     } else if (opcion==2){
@@ -42,7 +42,7 @@ void Empleado::repuestos_empleados(){
     Repuesto r;
     int opcion;
     cout<<"REPUESTOS"<<endl;
-    cout<<"Que accion desea realizar? 1. Consultar | 2.Actualizar " <<endl; cin>>opcion;
+    cout<<"Que accion desea realizar? 1. Consultar | 2.Actualizar (Realizar una venta) " <<endl; cin>>opcion;
     if (opcion==1){
         r.consulta();
     } else if (opcion==2){

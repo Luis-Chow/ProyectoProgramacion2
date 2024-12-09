@@ -1,29 +1,28 @@
-#include "../controller/ClientesController.cpp"
-#include "../controller/VehiculosController.cpp"
-#include "../controller/RepuestosController.cpp"
-#include "../model/Usuario/Usuario.h"
+#include "ManagerController.cpp"
+#include "../model/Usuario/Admin.h"
 
 
-void Admin::crearCopiaSeguridad_admin(){
+
+void Admin::copia_seguridad() {
     string archivo;
     int opcion;
-    cout<<"Copia de seguridad"<<endl;
-    cout<<"Que archivo desea respaldar? /n1 = Vehiculos | 2 = Clientes | 3 = Repuestos/n"; cin>>opcion;
-    if (opcion==1){
+    cout << "Copia de seguridad" << endl;
+    cout << "Que archivo desea respaldar? \n1 = Vehiculos | 2 = Clientes | 3 = Repuestos\n"; cin >> opcion;
+    if (opcion == 1) {
         archivo = "../model/Vehiculos/Vehiculos.csv";
     }
-    if (opcion==2){
+    if (opcion == 2) {
         archivo = "../model/Clientes/Clientes.csv";
     }
-    if (opcion==3){
+    if (opcion == 3) {
         archivo = "../model/Repuestos/Repuestos.csv";
     }
+
     time_t now = time(0);
     tm *ltm = localtime(&now);
     stringstream ss;
-    ss << "backup/" << 1900 + ltm->tm_year << "-" << 1 + ltm->tm_mon << "-" << ltm->tm_mday << "_" << ltm->tm_hour << "-" << ltm->tm_min << "-" << ltm->tm_sec << ".csv";
+    ss << "../model/backup/" << 1900 + ltm->tm_year << "-" << 1 + ltm->tm_mon << "-" << ltm->tm_mday << "_" << ltm->tm_hour << "-" << ltm->tm_min << "-" << ltm->tm_sec << ".csv";
     string backupFileName = ss.str();
-
     ifstream src(archivo, ios::binary);
     ofstream dst(backupFileName, ios::binary);
     dst << src.rdbuf();

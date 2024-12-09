@@ -1,7 +1,5 @@
-#include "../controller/ClientesController.cpp"
-#include "../controller/VehiculosController.cpp"
-#include "../controller/RepuestosController.cpp"
-#include "../model/Usuario/Usuario.h"
+#include "../model/Usuario/Manager.h"
+#include "EmpleadoController.cpp"
 
 void Manager::clientes_manager(){
     Cliente c;
