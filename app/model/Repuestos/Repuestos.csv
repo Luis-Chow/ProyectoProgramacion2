@@ -34,7 +34,6 @@ Honda,bujias,Pilot,2002,46,172
 Chevrolet,embrague,Malibu,2003,1,121
 Ford,filtro de aceite,F-Series,1995,154,188
 Volkswagen,alternador,Jetta,1991,25,57
-Honda,amortiguadores,Prelude,1999,216,131
 Kia,aceite de motor,Amanti,2004,262,173
 Pontiac,embrague,Tempest,1961,423,27
 Dodge,pastillas de freno,Challenger,2011,92,26
@@ -46,5 +45,4 @@ Toyota,inyectores,Previa,1994,495,28
 Volkswagen,escape,Golf,1988,218,23
 GMC,radiador,Rally Wagon 2500,1994,111,30
 Lincoln,filtro de aceite,Town Car,2004,212,78
-Pontiac,amortiguadores,Grand Prix,1978,311,9
-Mitsubishi,neumaticos,Mirage,1993,177,117
+Pontiac,amortiguadores,Grand Prix,1978,311,1

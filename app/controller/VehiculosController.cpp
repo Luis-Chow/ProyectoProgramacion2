@@ -26,7 +26,7 @@ void Vehiculo::insercion(){
     while(getline(input, linea)){
         Vout<<linea<<endl;
     };
-    Vout<<marca<<","<<modelo<<","<<anio<<","<<placa<<","<<color<<","<<precio_renta<<","<<kilometraje<<","<<rentado<<","<<motor<<","<<ced_cliente<<","<<fecha_de_entrega<<endl;
+    Vout<<modelo<<","<<marca<<","<<placa<<","<<color<<","<<anio<<","<<kilometraje<<","<<rentado<<","<<motor<<","<<precio_renta<<","<<ced_cliente<<","<<fecha_de_entrega<<endl;
     Vout.close();
     input.close();
     cout<<"Desea confirmar el cambio?  1. Si |  2. No"<<endl; cin>>confirmar;
@@ -74,7 +74,7 @@ void Vehiculo::actualizar() {
     string linea;
     int confirmar;
     cout << "Ingrese la fila a actualizar: "; cin >> fila_actualizar; fila_actualizar -= 1;
-    cout << "Ingrese el dato a actualizar:  1.Marca | 2.Modelo | 3.Anio | 4.Placa | 5.Color | 6.Precio_renta | 7.Kilometraje | 8.Rentado | 9.Motor | 10.Cedula_cliente | 11.Fecha_de_entrega " << endl;
+    cout << "Ingrese el dato a actualizar:  1.Modelo | 2.Marca | 3.Placa | 4.Color | 5.Anio | 6.Kilometraje | 7.Rentado | 8.Motor | 9.Precio de renta | 10.Cedula_cliente | 11.Fecha_de_entrega " << endl;
     cin >> columna_actualizar;
     cin.ignore(100, '\n');
     while (getline(input, linea)) {

@@ -6,7 +6,7 @@ void Repuesto::insercion(){
     int confirmar;
     ifstream input("./model/Repuestos/Repuestos.csv");
     ofstream Vout("./model/Repuestos/temp.csv");
-    cout<<"Marca del repuesto: "; getline(cin,marca);
+    cout<<"Marca del repuesto: "; cin>>marca;
     cout<<"Nombre del repuesto: "; cin>>nombre;
     cout<<"Modelo del carro: "; cin>>modelo_carro;
     cout<<"Anio del carro: "; cin>>anio_carro;

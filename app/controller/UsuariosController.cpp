@@ -3,15 +3,15 @@
 #include "../controller/VehiculosController.cpp"
 #include "../controller/RepuestosController.cpp"
 
-void registro(const string& nombre, int opcion1) {
-    ofstream archivo("../model/Usuario/Usuarios.csv", ios::app);
+void registro(const string& nombre,const string& apellido, int opcion1) {
+    ofstream archivo("./model/Usuario/Usuarios.csv", ios::app);
     if (archivo.is_open()) {
         if(opcion1 == 1){
-            archivo << nombre << "," << "Admin" << "\n";
+            archivo << nombre << " "<< apellido<< "," << "Admin" << "\n";
         } else if (opcion1 == 2){
-            archivo << nombre << "," << "Manager" << "\n";
+            archivo << nombre << " "<< apellido << "," << "Manager" << "\n";
         } else if (opcion1 == 3){
-            archivo << nombre << "," << "Empleado" << "\n";
+            archivo << nombre << " "<< apellido << "," << "Empleado" << "\n";
         }
         archivo.close();
     } else {
@@ -132,7 +132,7 @@ void Admin::clientes_admin(){
     Cliente c;
     int opcion;
     cout<<"CLIENTES"<<endl;
-    cout<<"Que accion desea realizar? /n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta/n"; cin>>opcion;
+    cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta\n"; cin>>opcion;
     if (opcion==1){
         c.borrar();
     }
@@ -151,7 +151,7 @@ void Admin::repuestos_admin(){
     Repuesto r;
     int opcion;
     cout<<"REPUESTOS"<<endl;
-    cout<<"Que accion desea realizar? /n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta/n"; cin>>opcion;
+    cout<<"Que accion desea realizar? \n1 = Borrar | 2 = Actualizar | 3 = Insercion | 4 = Consulta\n"; cin>>opcion;
     if (opcion==1){
         r.borrar();
     }
@@ -171,12 +171,14 @@ void Admin::usuarios_admin(){
     cout<<"USUARIOS"<<endl;
     cout<<"Que accion desea realizar? 1. Registro | 2. Borrar | 3. Consulta"<<endl; cin>>opcion;
     string nombre;
+    string apellido;
     int opcion1;
     switch(opcion){
         case 1:
             cout<<"Ingrese el nombre del usuario: "; cin>>nombre;
+            cout<<"Ingrese el apellido del usuario: "; cin>>apellido;
             cout<<"Ingrese el tipo de usuario: 1.Admin | 2.Manager | 3.Empleado"<<endl; cin>>opcion1;
-            registro(nombre, opcion1);
+            registro(nombre, apellido, opcion1);
             break;
         case 2:
             borrarRegistro();
@@ -248,17 +250,19 @@ void Manager::usuarios_manager(){
     cout<<"USUARIOS"<<endl;
     cout<<"Que accion desea realizar? 1. Registro | 2. Borrar | 3. Consulta"<<endl; cin>>opcion;
     string nombre;
+    string apellido;
     int opcion1=0;
     int opcion2;
     switch(opcion){
         case 1:
             cout<<"Ingrese el nombre del usuario: "; cin>>nombre;
+            cout<<"Ingrese el apellido del usuario: "; cin>>apellido;
             cout<<"Ingrese el tipo de usuario: 1.Manager | 2.Empleado: "<<endl; cin>>opcion2;
             if(opcion2<1 || opcion2>2){
                 cout<<"Opcion no valida"<<endl;
             }else if(opcion2==1 || opcion2 == 2){
             opcion1 = 1 + opcion2;
-            registro(nombre, opcion1);
+            registro(nombre, apellido, opcion1);
             }
             break;
         case 2:

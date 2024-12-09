@@ -1,24 +1,29 @@
 #include "../controller/UsuariosController.cpp"
 
 int main(){
-    bool salir = false;
-    string nombre;
-    int opcion1, opcion2;
+    bool continuarexterno = true;
+    string nombre,apellido;
+    int opcion1, opcion2,opcioninterno,opcionexterno;
     cout << "SISTEMA DE GERENCIA" << endl;
-    cout << "Por favor ingrese su Nombre (*Nombre* *Apellido*)" << endl; 
-    getline(cin, nombre);
+    while(continuarexterno){
+    bool continuarinterno = true;
+    cout << "Por favor ingrese su Nombre: " << endl;
+    cin >> nombre;
+    cout << "Por favor ingrese su Apellido: " << endl;
+    cin >> apellido;
     cout << "Por favor ingrese su tipo de usuario" << endl;
     cout << "1 = Admin | 2 = Manager | 3 = Empleado" << endl; cin >> opcion1;
     if(opcion1<0 && opcion1>4){
         cout << "Opcion no valida" << endl;
         return 0;
     }
-    registro(nombre, opcion1);
+    registro(nombre, apellido, opcion1);
 
     switch(opcion1){
         case 1:
-            Admin a;
             cout << "Bienvenido " << nombre << ", Eres un admin" <<endl;
+            while(continuarinterno){
+            Admin a;
             cout << "Que accion desea realizar? " <<endl;
             cout << "1. Manejar el archivo de vehiculos" << endl;
             cout << "2. Manejar el archivo de clientes" << endl;
@@ -45,10 +50,18 @@ int main(){
                     cout << "Opcion no valida" << endl;
                     break;
             }
+            cout<< "Desea continuar el programa? 1.Si | 2.No"<<endl; cin>>opcioninterno;
+            if(opcioninterno==2){
+                continuarinterno = false;
+            } else{
+                cout << "Continuando..." << endl;
+            }
+            }
             break;
         case 2:
-            Manager m;
             cout << "Bienvenido " << nombre << ", Eres un manager" << endl;
+            while(continuarinterno){
+                Manager m;
             cout << "Que accion desea realizar? " << endl;
             cout << "1. Manejar el archivo de vehiculos" << endl;
             cout << "2. Manejar el archivo de clientes" << endl;
@@ -71,10 +84,18 @@ int main(){
                     cout << "Opcion no valida" << endl;
                     break;
             }
+            cout<< "Desea continuar el programa? 1.Si | 2.No"<<endl; cin>>opcioninterno;
+            if(opcioninterno==2){
+                continuarinterno = false;
+            } else{
+                cout << "Continuando..." << endl;
+            }
+            }
             break;
         case 3:
-            Empleado e;
             cout << "Bienvenido " << nombre << ", Eres un empleado" << endl;
+            while(continuarinterno){
+            Empleado e;
             cout << "Que accion desea realizar? " << endl;
             cout << "1. Asociado a vehiculos" << endl;
             cout << "2. Asociado a clientes" << endl;
@@ -93,10 +114,27 @@ int main(){
                     cout << "Opcion no valida" << endl;
                     break;
             }
+            cout<< "Desea continuar el programa? 1.Si | 2.No"<<endl; cin>>opcioninterno;
+            if(opcioninterno==2){
+                continuarinterno = false;
+            } else{
+                cout << "Continuando..." << endl;
+            }
+            }
             break;
         default:
         cout << "Opcion no valida" << endl;
         break;
     }
-    
+    cout << "Ingrese la siguiente accion"<<endl;
+    cout << "1. Cambiar de usuario" <<endl;
+    cout << "2. Salir del programa" <<endl; cin >> opcionexterno;
+    if(opcionexterno==2){
+        continuarexterno = false;
+    } else{
+        cout << "Reiniciando sesion..." << endl;
+        cout << endl;
+    }
+    }
+    return 0;
 }
