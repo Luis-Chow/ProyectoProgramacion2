@@ -63,36 +63,53 @@ void leerUsuariosCSV() {
 }
 
 void Admin::copia_seguridad() {
+    string linea;
     string archivo;
     int opcion;
     cout << "Copia de seguridad" << endl;
-    cout << "Que archivo desea respaldar? \n1 = Vehiculos | 2 = Clientes | 3 = Repuestos\n"; cin >> opcion;
+    cout << "Que archivo desea respaldar? \n1 = Vehiculos | 2 = Clientes | 3 = Repuestos | 4 = Usuarios\n"; cin >> opcion;
     if (opcion == 1) {
         archivo = "../model/Vehiculos/Vehiculos.csv";
-    }
-    if (opcion == 2) {
+    } else if (opcion == 2) {
         archivo = "../model/Clientes/Clientes.csv";
-    }
-    if (opcion == 3) {
+    } else if (opcion == 3) {
         archivo = "../model/Repuestos/Repuestos.csv";
+    } else if(opcion == 4){
+        archivo = "../model/Usuario/Usuarios.csv";
+    } else {
+        cout << "Opcion no valida" << endl;
+        return;
     }
 
     time_t now = time(0);
     tm *ltm = localtime(&now);
     stringstream ss;
-    ss << "../model/backup/" << 1900 + ltm->tm_year << "-" << 1 + ltm->tm_mon << "-" << ltm->tm_mday << "_" << ltm->tm_hour << "-" << ltm->tm_min << "-" << ltm->tm_sec << ".csv";
+    ss << "../model/backup/" <<ltm->tm_mday << "-" << 1 + ltm->tm_mon << "-" << 1900 + ltm->tm_year;
     string backupFileName = ss.str();
-    ifstream src(archivo, ios::binary);
-    ofstream dst(backupFileName, ios::binary);
-    dst << src.rdbuf();
-
-    src.close();
-    dst.close();
-
+    ifstream input(archivo);
+    ofstream temp("../model/Backup/temp.csv");
+    while (getline(input, linea)) {
+        temp << linea << endl;
+    }
+    input.close();
+    temp.close();
+    if(opcion==1){
+        backupFileName+=" Vehiculos.csv";
+        rename("../model/Backup/temp.csv", backupFileName.c_str());
+    }else if(opcion==2){
+        backupFileName+=" Clientes.csv";
+        rename("../model/Backup/temp.csv", backupFileName.c_str());
+    }else if(opcion==3){
+        backupFileName+=" Repuestos.csv";
+        rename("../model/Backup/temp.csv", backupFileName.c_str());
+    }else if(opcion==4){
+        backupFileName+=" Usuarios.csv";
+        rename("../model/Backup/temp.csv", backupFileName.c_str());
+    }
     cout << "Copia de seguridad creada: " << backupFileName << endl;
 }
 
-void Admin :: vehiculos_admin(){
+void Admin::vehiculos_admin(){
     Vehiculo v;
     int opcion;
     cout <<"VEHICULOS"<<endl;
